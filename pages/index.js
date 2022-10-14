@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
+import Navbar from 'components/navbar'
+import Main from 'components/main'
 
 export default function Home () {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Abel Rangel</title>
-        <meta name="description" content="Página en desarrollo" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description"
+              content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"/>
       </Head>
-
-      <main className={styles.main}>
-        <h1>Abel Rangel</h1>
-      </main>
+      <Navbar/>
+      <Main/>
     </div>
   )
 }

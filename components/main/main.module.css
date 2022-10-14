@@ -1,0 +1,101 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: calc(100vh - 5rem);
+    align-items: center;
+}
+
+.content .informationContainer {
+    width: 60%;
+}
+
+.content .imageContainer {
+    width: 40%;
+}
+
+.profileImage {
+    border: 20px solid rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+}
+
+.profileImage .preImage {
+    border: 20px solid rgba(0, 0, 0, 0.17);
+    border-radius: 50%;
+}
+
+.profileImage img {
+    border-radius: 50%;
+}
+
+.bubble {
+    background-color: var(--color-primary);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px 20px 20px 0;
+    width: fit-content;
+    color: #fff;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
+
+.rol {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.informationItems {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.RRSSIcons {
+    display: flex;
+    gap: .5rem;
+}
+
+@media (max-width: 520px) {
+    .content {
+        flex-direction: column;
+        padding: 0 1rem;
+        min-height: auto;
+    }
+
+    .informationContainer {
+        order: 2;
+        width: 100% !important;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        order: 1;
+        width: 80% !important;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .rol {
+        font-size: 1.3rem;
+        margin-top: .2rem;
+    }
+}
