@@ -71,8 +71,8 @@
 @media (max-width: 520px) {
     .content {
         flex-direction: column;
-        padding: 0 1rem;
         min-height: auto;
+        padding: 7rem 1rem 0;
     }
 
     .informationContainer {
