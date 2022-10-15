@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navbar from 'components/navbar'
 import Main from 'components/main'
 import StatsSummary from 'components/statsSummary'
+import AboutMe from 'components/aboutMe'
 
 export default function Home () {
   return (
@@ -15,6 +16,7 @@ export default function Home () {
       <Navbar/>
       <Main/>
       <StatsSummary/>
+      <AboutMe/>
     </div>
   )
 }

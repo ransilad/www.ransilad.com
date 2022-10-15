@@ -1,0 +1,88 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imageContainer {
+    width: 30%;
+}
+
+.informationContainer {
+    padding-left: 1rem;
+    width: 50%;
+}
+
+.informationContainer p {
+    margin: 0;
+}
+
+.informationContainer .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.informationContainer .description {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.informationContainer .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 2rem;
+}
+
+.tags span {
+    font-size: .8rem;
+    font-weight: 400;
+    padding: .3rem 1rem;
+    border-radius: .7rem;
+    background-color: #f8f8f8;
+    border: 1px solid var(--color-primary);
+    color: #333;
+}
+
+.informationContainer a {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .6rem 1rem;
+    border-radius: 2rem;
+    background-color: var(--color-primary);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.informationContainer a:hover {
+    background-color: var(--color-dark);
+}
+
+@media (max-width: 520px) {
+    .content {
+        flex-direction: column;
+        padding: 4rem 1rem;
+    }
+
+    .imageContainer {
+        width: 70%;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .informationContainer {
+        width: 100%;
+        padding: 0;
+    }
+}
