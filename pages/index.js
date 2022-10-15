@@ -6,6 +6,7 @@ import Navbar from 'components/navbar'
 import Main from 'components/main'
 import StatsSummary from 'components/statsSummary'
 import AboutMe from 'components/aboutMe'
+import Footer from 'components/footer'
 
 export default function Home () {
   const { asPath } = useRouter()
@@ -37,6 +38,7 @@ export default function Home () {
       <div ref={aboutUsRef}>
         <AboutMe/>
       </div>
+      <Footer/>
     </div>
   )
 }
