@@ -15,6 +15,9 @@ const MENU = [{
 }, {
   label: 'Portafolio',
   href: '/#portfolio'
+}, {
+  label: 'Contacto',
+  href: '/#contact-me'
 }]
 
 export default function Navbar () {

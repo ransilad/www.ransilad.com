@@ -7,7 +7,7 @@ export default function AboutMe () {
     <div className="container">
       <div className={styles.content}>
         <div className={styles.imageContainer}>
-          <Image src="/images/developer.svg" width={850} height={740} layout="responsive"/>
+          <Image src="/images/developer.svg" width={850} height={740} layout="responsive" alt=""/>
         </div>
         <div className={styles.informationContainer}>
           <p className={styles.title}>Acerca de mi</p>

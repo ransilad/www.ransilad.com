@@ -17,10 +17,12 @@ export default function Main () {
           <p className={styles.name}>Abel Rangel</p>
           <p className={styles.rol}>Desarrollador Fullstack</p>
           <p className={styles.informationItems}>
-            <MailIcon width={20} height={20}/> abeld.rangels@gmail.com
+            <MailIcon width={20} height={20}/>
+            <a href="mailto:abeld.rangels@gmail.com" target="_blank" rel="noreferrer">abeld.rangels@gmail.com</a>
           </p>
           <p className={styles.informationItems}>
-            <PhoneIcon width={20} height={20}/> +56930627603
+            <PhoneIcon width={20} height={20}/>
+            <a href="tel:+56930627603" target="_blank" rel="noreferrer">+56930627603</a>
           </p>
           <p className={styles.RRSSIcons}>
             <a href="https://www.linkedin.com/in/ransilad" target='_blank' rel="noreferrer">

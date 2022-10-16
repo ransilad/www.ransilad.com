@@ -65,7 +65,7 @@
 
 .RRSSIcons {
     display: flex;
-    gap: .5rem;
+    gap: .8rem;
 }
 
 @media (max-width: 768px) {
