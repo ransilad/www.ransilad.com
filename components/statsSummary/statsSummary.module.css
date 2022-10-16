@@ -44,12 +44,12 @@
     color: var(--color-primary)
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
     .statsContainer {
         flex-direction: column;
         padding: 2rem 1rem 1rem;
         border-radius: 2rem;
-        margin: 2rem 2rem;
+        margin: 2rem 1rem;
     }
 
     .separator {

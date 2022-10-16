@@ -7,6 +7,7 @@ import Main from 'components/main'
 import StatsSummary from 'components/statsSummary'
 import AboutMe from 'components/aboutMe'
 import Footer from 'components/footer'
+import Testimonials from 'components/testimonials'
 
 export default function Home () {
   const { asPath } = useRouter()
@@ -38,6 +39,7 @@ export default function Home () {
       <div ref={aboutUsRef}>
         <AboutMe/>
       </div>
+      <Testimonials/>
       <Footer/>
     </div>
   )

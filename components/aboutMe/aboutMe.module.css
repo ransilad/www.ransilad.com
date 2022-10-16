@@ -69,7 +69,7 @@
     background-color: var(--color-dark);
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
     .content {
         flex-direction: column;
         padding: 4rem 1rem;

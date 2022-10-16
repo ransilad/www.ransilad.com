@@ -66,7 +66,7 @@
     border-bottom: var(--color-primary) 2px solid;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 1rem 0;
     }

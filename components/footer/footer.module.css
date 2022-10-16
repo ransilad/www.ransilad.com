@@ -3,3 +3,9 @@
     font-weight: 200;
     margin: 2rem 0;
 }
+
+@media (max-width: 768px) {
+    .footerText {
+        text-align: center;
+    }
+}
