@@ -8,6 +8,7 @@ import AboutMe from 'components/aboutMe'
 import Footer from 'components/footer'
 import Testimonials from 'components/testimonials'
 import Portfolio from 'components/portfolio'
+import ContactMe from 'components/contactMe'
 
 export default function Home () {
   const { asPath } = useRouter()
@@ -40,6 +41,7 @@ export default function Home () {
       <div ref={portfolioRef}>
         <Portfolio/>
       </div>
+      <ContactMe/>
       <Testimonials/>
       <Footer/>
     </div>
