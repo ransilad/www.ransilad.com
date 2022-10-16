@@ -28,8 +28,10 @@ export default function Home () {
     <div>
       <Head>
         <title>Abel Rangel</title>
-        <meta name="description"
-              content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"/>
+        <meta
+          name="description"
+          content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"
+        />
       </Head>
       <Navbar/>
       <div ref={homeUsRef}>
