@@ -12,6 +12,9 @@ const MENU = [{
 }, {
   label: 'Acerca de mi',
   href: '/#about-me'
+}, {
+  label: 'Portafolio',
+  href: '/#portfolio'
 }]
 
 export default function Navbar () {
@@ -63,7 +66,7 @@ export default function Navbar () {
         <div className={styles.navbar_menu}>
           <div className={styles.logo}>
             <Link href={'/#home'}>
-              <Logo width={80}/>
+              <a><Logo width={80}/></a>
             </Link>
           </div>
           <div className={styles.openMobileMenu}>

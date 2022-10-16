@@ -50,7 +50,7 @@
 .navbar_items {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .navbar_item {
