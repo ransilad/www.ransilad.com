@@ -17,55 +17,85 @@ const CATEGORIES = [{
 }]
 
 const PORTFOLIO_ITEMS = [{
-  id: 'inlet-01',
+  id: 'inlet',
   category: ['all', 'web', 'mobile'],
   title: 'Inlet',
   image: '/images/portfolio/cover/inlet.jpg'
 }, {
-  id: 'voyhoy-01',
-  category: ['all', 'web'],
+  id: 'voyhoy',
+  category: ['all', 'web', 'api'],
   title: 'Voyhoy',
   image: '/images/portfolio/cover/voyhoy.jpg'
 }, {
-  id: 'techk-01',
+  id: 'damath',
+  category: ['all', 'web'],
+  title: 'Damath',
+  image: '/images/portfolio/cover/damath.jpg'
+}, {
+  id: 'techk',
   category: ['all', 'web', 'api'],
   title: 'techk',
   image: '/images/portfolio/cover/techk.jpg'
 }, {
-  id: 'cocha-01',
+  id: 'cocha',
   category: ['all', 'web', 'api'],
   title: 'Cocha',
   image: '/images/portfolio/cover/cocha.jpg'
 }, {
-  id: 'tendy-01',
+  id: 'tendy',
   category: ['all', 'web', 'api', 'mobile'],
   title: 'Tendy',
   image: '/images/portfolio/cover/tendy.jpg'
 }, {
-  id: 'idc-01',
+  id: 'idc',
   category: ['all', 'web'],
   title: 'IDC',
   image: '/images/portfolio/cover/idc.jpg'
 }, {
-  id: 'a21-01',
+  id: 'a21',
   category: ['all', 'mobile'],
   title: 'A21',
   image: '/images/portfolio/cover/a21.jpg'
 }, {
-  id: 'dtemite-01',
+  id: 'dtemite',
   category: ['all', 'mobile', 'api'],
   title: 'Dtemite',
   image: '/images/portfolio/cover/dtemite.jpg'
 }, {
-  id: 'nrp-01',
+  id: 'nrp',
   category: ['all', 'web'],
   title: 'NextRoundPartners',
   image: '/images/portfolio/cover/nrp.jpg'
 }, {
-  id: 'ona-01',
+  id: 'ona',
   category: ['all', 'web'],
   title: 'OnaStudio',
   image: '/images/portfolio/cover/ona.jpg'
+}, {
+  id: 'lopesa',
+  category: ['all', 'web', 'mobile'],
+  title: 'Lopesa',
+  image: '/images/portfolio/cover/lopesa.jpg'
+}, {
+  id: 'switchmultimpresor',
+  category: ['all', 'web'],
+  title: 'Switch Multi Impresor',
+  image: '/images/portfolio/cover/bch_switchmultimpresor.jpg'
+}, {
+  id: 'cobranzas',
+  category: ['all', 'web'],
+  title: 'Cobranzas',
+  image: '/images/portfolio/cover/bch-cobranzas.jpg'
+}, {
+  id: 'agendamiento',
+  category: ['all', 'web'],
+  title: 'Agendamiento',
+  image: '/images/portfolio/cover/bch-agendamiento.jpg'
+}, {
+  id: 'contact-center',
+  category: ['all', 'web'],
+  title: 'Contact Center',
+  image: '/images/portfolio/cover/bch-contact-center.jpg'
 }]
 
 export default function Portfolio () {
