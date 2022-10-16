@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { createRef, useEffect } from 'react'
 
@@ -30,13 +29,6 @@ export default function Home () {
 
   return (
     <div>
-      <Head>
-        <title>Abel Rangel</title>
-        <meta
-          name="description"
-          content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"
-        />
-      </Head>
       <Navbar/>
       <div ref={homeUsRef}>
         <Main/>

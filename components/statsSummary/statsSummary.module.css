@@ -1,12 +1,12 @@
 .statsContainer {
-    margin: 2rem 0;
+    align-items: center;
     background-color: #f3f3f3;
     border-radius: 5rem;
-    padding: 2rem 3rem;
+    box-shadow: 0 7px 10px rgb(0 0 0 / 10%);
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 7px 10px rgb(0 0 0 / 10%);
+    margin: 2rem 0;
+    padding: 2rem 3rem;
 }
 
 .separator {
@@ -15,15 +15,15 @@
 }
 
 .item {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .item div:first-child {
+    margin-right: 1rem;
     padding: .5rem;
     width: 80px;
-    margin-right: 1rem;
 }
 
 .item div:last-child {
@@ -32,24 +32,24 @@
 }
 
 .item span {
-    font-weight: 600;
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .item p {
-    margin-top: .2rem;
-    margin-bottom: 0;
-    font-weight: 700;
+    color: var(--color-primary);
     font-size: .9rem;
-    color: var(--color-primary)
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: .2rem;
 }
 
 @media (max-width: 768px) {
     .statsContainer {
-        flex-direction: column;
-        padding: 2rem 1rem 1rem;
         border-radius: 2rem;
+        flex-direction: column;
         margin: 2rem 1rem;
+        padding: 2rem 1rem 1rem;
     }
 
     .separator {
@@ -57,8 +57,8 @@
     }
 
     .item {
-        margin-bottom: 2rem;
         flex-direction: column;
+        margin-bottom: 2rem;
         text-align: center;
     }
 

@@ -1,10 +1,10 @@
 .content {
+    align-items: center;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    box-sizing: border-box;
     padding: 12rem 0 8rem 0;
-    align-items: center;
+    width: 100%;
 }
 
 .content .informationContainer {
@@ -31,14 +31,14 @@
 
 .bubble {
     background-color: var(--color-primary);
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    padding: 10px 30px;
     border-radius: 20px 20px 20px 0;
-    width: fit-content;
     color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding: 10px 30px;
+    width: fit-content;
 }
 
 .name {
@@ -55,12 +55,12 @@
 }
 
 .informationItems {
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: .5rem;
-    display: flex;
     align-items: center;
+    display: flex;
+    font-size: 1rem;
     gap: .6rem;
+    margin-bottom: .5rem;
+    margin-top: 0;
 }
 
 .RRSSIcons {
@@ -76,18 +76,18 @@
     }
 
     .informationContainer {
-        order: 2;
-        width: 100% !important;
         align-items: center;
         display: flex;
         flex-direction: column;
+        order: 2;
+        width: 100% !important;
     }
 
     .imageContainer {
-        order: 1;
-        width: 80% !important;
-        text-align: center;
         margin-bottom: 2rem;
+        order: 1;
+        text-align: center;
+        width: 80% !important;
     }
 
     .name {
