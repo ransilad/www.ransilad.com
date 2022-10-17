@@ -20,7 +20,7 @@ const TESTIMONIALS = [{
 
 export default function Testimonials () {
   return (
-    <div className="container">
+    <div className="container" data-aos="zoom-in">
       <p className={styles.subTitle}>Testimonios</p>
       <p className={styles.title}>Lo que dicen mis compañeros</p>
       <div className={styles.testimonials}>

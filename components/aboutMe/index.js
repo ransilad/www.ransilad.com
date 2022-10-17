@@ -4,7 +4,7 @@ import styles from './aboutMe.module.css'
 
 export default function AboutMe () {
   return (
-    <div className="container">
+    <div className="container" data-aos="fade-down">
       <div className={styles.content}>
         <div className={styles.imageContainer}>
           <Image src="/images/developer.svg" width={850} height={740} layout="responsive" alt=""/>
