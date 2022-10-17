@@ -1,5 +1,6 @@
-import styles from './contactMe.module.css'
 import Image from 'next/image'
+
+import styles from './contactMe.module.css'
 
 export default function ContactMe () {
   return (
