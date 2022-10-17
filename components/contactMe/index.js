@@ -13,7 +13,7 @@ export default function ContactMe () {
           </div>
         </div>
       </div>
-      <div className={styles.contactMeContainer} data-aos="flip-down">
+      <div className={styles.contactMeContainer}>
         <div className="container">
           <div className={styles.content}>
             <div className={styles.card}>

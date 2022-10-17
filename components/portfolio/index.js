@@ -119,7 +119,7 @@ const PORTFOLIO_ITEMS = [{
 export default function Portfolio () {
   const [selectedCategory, setSelectedCategory] = useState('all')
   return (
-    <div className={styles.portfolioContainer} data-aos="slide-left">
+    <div className={styles.portfolioContainer}>
       <div className="container">
         <p className={styles.title}>Portafolio</p>
         <div className={styles.filters}>
