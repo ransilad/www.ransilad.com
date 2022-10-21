@@ -1,9 +1,11 @@
+import React from 'react'
+
 import styles from './statsSummary.module.css'
 import ProjectsIcon from '../icons/projects'
 import SupportIcon from '../icons/support'
 import ExperienceIcon from '../icons/experience'
 
-export default function StatsSummary () {
+function StatsSummary () {
   return (
     <div className="container">
       <div className={styles.statsContainer}>
@@ -40,3 +42,5 @@ export default function StatsSummary () {
     </div>
   )
 }
+
+export default React.memo(StatsSummary)

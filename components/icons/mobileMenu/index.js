@@ -1,3 +1,5 @@
+import React from 'react'
+
 const MobileMenuIcon = (props) => (
   <svg
     height={32}
@@ -14,4 +16,4 @@ const MobileMenuIcon = (props) => (
   </svg>
 )
 
-export default MobileMenuIcon
+export default React.memo(MobileMenuIcon)

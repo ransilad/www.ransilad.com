@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 import styles from './portfolio.module.css'
@@ -116,7 +116,7 @@ const PORTFOLIO_ITEMS = [{
   topic: 'Banca'
 }]
 
-export default function Portfolio () {
+function Portfolio () {
   const [selectedCategory, setSelectedCategory] = useState('all')
   return (
     <div className={styles.portfolioContainer}>
@@ -154,3 +154,5 @@ export default function Portfolio () {
     </div>
   )
 }
+
+export default React.memo(Portfolio)

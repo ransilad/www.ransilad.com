@@ -1,7 +1,9 @@
-import styles from './contactMeSimple.module.css'
+import React from 'react'
 import Link from 'next/link'
 
-export default function ContactMeSimple () {
+import styles from './contactMeSimple.module.css'
+
+function ContactMeSimple () {
   return (
     <div className={styles.contactMeContainer}>
       <div className="container">
@@ -19,3 +21,5 @@ export default function ContactMeSimple () {
     </div>
   )
 }
+
+export default React.memo(ContactMeSimple)

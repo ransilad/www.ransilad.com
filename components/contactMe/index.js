@@ -1,8 +1,9 @@
+import React from 'react'
 import Image from 'next/image'
 
 import styles from './contactMe.module.css'
 
-export default function ContactMe () {
+function ContactMe () {
   return (
     <>
       <div className={styles.contactMeContainerWithImage}>
@@ -38,3 +39,5 @@ export default function ContactMe () {
     </>
   )
 }
+
+export default React.memo(ContactMe)

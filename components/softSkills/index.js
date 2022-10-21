@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 
 import styles from './softSkills.module.css'
@@ -46,7 +47,7 @@ const SOFT_SKILLS = [{
   }
 }]
 
-export default function SoftSkills () {
+function SoftSkills () {
   return (
     <div className="container">
       <div className={styles.title}>
@@ -70,4 +71,6 @@ export default function SoftSkills () {
       </div>
     </div>
   )
-};
+}
+
+export default React.memo(SoftSkills)

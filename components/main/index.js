@@ -1,12 +1,14 @@
-import styles from './main.module.css'
+import React from 'react'
 import Image from 'next/image'
+
+import styles from './main.module.css'
 import MailIcon from '../icons/mail'
 import PhoneIcon from '../icons/phone'
 import LinkedInIcon from '../icons/rrss/linkedin'
 import GithubIcon from '../icons/rrss/github'
 import TwitterIcon from '../icons/rrss/twitter'
 
-export default function Main () {
+function Main () {
   return (
     <div className="container">
       <div className={styles.content}>
@@ -54,3 +56,5 @@ export default function Main () {
     </div>
   )
 }
+
+export default React.memo(Main)

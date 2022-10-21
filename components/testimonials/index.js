@@ -1,5 +1,7 @@
-import styles from './testimonials.module.css'
+import React from 'react'
 import Image from 'next/image'
+
+import styles from './testimonials.module.css'
 
 const TESTIMONIALS = [{
   name: 'Roger Robinson',
@@ -18,7 +20,7 @@ const TESTIMONIALS = [{
   image: '/images/testimonials/angel.jpg'
 }]
 
-export default function Testimonials () {
+function Testimonials () {
   return (
     <div className="container">
       <p className={styles.subTitle}>Testimonios</p>
@@ -52,3 +54,5 @@ export default function Testimonials () {
     </div>
   )
 }
+
+export default React.memo(Testimonials)

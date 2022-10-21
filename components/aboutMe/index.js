@@ -1,13 +1,20 @@
+import React from 'react'
 import Image from 'next/image'
 
 import styles from './aboutMe.module.css'
 
-export default function AboutMe () {
+function AboutMe () {
   return (
     <div className="container">
       <div className={styles.content}>
         <div className={styles.imageContainer}>
-          <Image src="/images/developer.svg" width={850} height={740} layout="responsive" alt=""/>
+          <Image
+            src="/images/developer.svg"
+            width={850}
+            height={740}
+            layout="responsive"
+            alt=""
+          />
         </div>
         <div className={styles.informationContainer}>
           <p className={styles.title}>Acerca de mi</p>
@@ -30,3 +37,5 @@ export default function AboutMe () {
     </div>
   )
 }
+
+export default React.memo(AboutMe)

@@ -1,3 +1,5 @@
+import React from 'react'
+
 import styles from './hardSkills.module.css'
 import ReactIcon from '../icons/skills/react'
 import NextIcon from '../icons/skills/next'
@@ -126,7 +128,7 @@ const HARD_SKILLS = [{
   image: <NetlifyIcon fill="#00C7B7"/>
 }]
 
-export default function HardSkills () {
+function HardSkills () {
   return (
     <div className="container">
       <div className={styles.hardSkillsContainer}>
@@ -155,4 +157,6 @@ export default function HardSkills () {
       </div>
     </div>
   )
-};
+}
+
+export default React.memo(HardSkills)

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -20,7 +20,7 @@ const MENU = [{
   href: '/#contact-me'
 }]
 
-export default function Navbar () {
+function Navbar () {
   const [showMenu, setShowMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [showMenuClass, setShowMenuClass] = useState(styles.hiddenMenu)
@@ -63,6 +63,30 @@ export default function Navbar () {
     }
   }
 
+  const renderMenuDesktop = useMemo(() => {
+    return (
+      MENU.map((item, i) => (
+        <Link href={item.href} key={i}>
+          <a className={styles.navbar_item}>
+            {item.label}
+          </a>
+        </Link>
+      ))
+    )
+  }, [])
+
+  const renderMenuMobile = useMemo(() => {
+    return (
+      MENU.map((item, i) => (
+        <div onClick={() => handleChangePage(item.href)} key={i}>
+          <span>
+            {item.label}
+          </span>
+        </div>
+      ))
+    )
+  }, [handleChangePage])
+
   return (
     <div className={`${styles.navbar} ${showMenuClass} ${scrolled ? styles.scrolled : ''}`}>
       <div className="container">
@@ -78,25 +102,15 @@ export default function Navbar () {
             </span>
           </div>
           <div className={styles.navbar_items}>
-            {MENU.map((item, i) => (
-              <Link href={item.href} key={i}>
-                <a className={styles.navbar_item}>
-                  {item.label}
-                </a>
-              </Link>
-            ))}
+            {renderMenuDesktop}
           </div>
         </div>
       </div>
       <div className={styles.menuMobile}>
-        {MENU.map((item, i) => (
-          <div onClick={() => handleChangePage(item.href)} key={i}>
-            <span>
-              {item.label}
-            </span>
-          </div>
-        ))}
+        {renderMenuMobile}
       </div>
     </div>
   )
 }
+
+export default React.memo(Navbar)

@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Logo = (props) => (
   <svg
     id="Capa_1"
@@ -23,4 +25,4 @@ const Logo = (props) => (
   </svg>
 )
 
-export default Logo
+export default React.memo(Logo)
