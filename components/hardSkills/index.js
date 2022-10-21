@@ -136,7 +136,7 @@ export default function HardSkills () {
         <div className={styles.contentContainer}>
           <p>
             A lo largo de los años he ido adquiriendo conocimientos en diferentes áreas de la programación, tanto en el
-            front-end como en el back-end. A continuación, te dejo una lista de las tecnologías que he utilizado en mis
+            front-end como en el back-end. A continuación, les dejo una lista de las tecnologías que he utilizado en mis
             proyectos.
           </p>
           <div>
