@@ -23,6 +23,9 @@ export default function Testimonials () {
     <div className="container">
       <p className={styles.subTitle}>Testimonios</p>
       <p className={styles.title}>Lo que dicen mis compañeros</p>
+      <p className={styles.linkedInLink}>
+        <a href="https://www.linkedin.com/in/ransilad/" target="_blank" rel="noreferrer">Ver en LinkedIn</a>
+      </p>
       <div className={styles.testimonials}>
         {TESTIMONIALS.map((testimonial, index) => (
           <div className={styles.card} key={index}>

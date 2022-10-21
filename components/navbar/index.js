@@ -91,9 +91,9 @@ export default function Navbar () {
       <div className={styles.menuMobile}>
         {MENU.map((item, i) => (
           <div onClick={() => handleChangePage(item.href)} key={i}>
-            <a>
+            <span>
               {item.label}
-            </a>
+            </span>
           </div>
         ))}
       </div>

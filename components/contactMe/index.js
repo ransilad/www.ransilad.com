@@ -9,7 +9,9 @@ export default function ContactMe () {
         <div className="container">
           <div className={styles.titleAndSubtitle}>
             <p className={styles.title}>Mantengámonos en contacto</p>
-            <p className={styles.subTitle}>Habla conmigo y trabajemos juntos</p>
+            <p className={styles.subTitle}>
+              Gracias por llegar hasta aquí. Espero que este portfolio, hecho con mucho cariño, haya sido de su agrado.
+            </p>
           </div>
         </div>
       </div>

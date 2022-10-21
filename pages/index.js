@@ -10,6 +10,7 @@ import Testimonials from 'components/testimonials'
 import Portfolio from 'components/portfolio'
 import ContactMeSimple from 'components/contactMeSimple'
 import ContactMe from 'components/contactMe'
+import SoftSkills from 'components/softSkills'
 
 export default function Home () {
   const { asPath } = useRouter()
@@ -42,6 +43,7 @@ export default function Home () {
       <div ref={aboutUsRef}>
         <AboutMe/>
       </div>
+      <SoftSkills/>
       <div ref={portfolioRef}>
         <Portfolio/>
       </div>

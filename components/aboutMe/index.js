@@ -12,30 +12,14 @@ export default function AboutMe () {
         <div className={styles.informationContainer}>
           <p className={styles.title}>Acerca de mi</p>
           <p className={styles.description}>
-            Hola, soy un Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo
-            posible. Me encanta la tecnología y la programación y, sobre todas las cosas me especializo en el desarrollo
-            de aplicaciones web y móviles.
+            Entusiasta de la tecnología, con un don para crear soluciones elegantes en el menor tiempo posible.
           </p>
-          <p className={styles.tags}>
-            <span>Frontend</span>
-            <span>html</span>
-            <span>css</span>
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>Angular</span>
-            <span>Vue</span>
-            <span>Svelte</span>
-            <span>Backend</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>NodeJS</span>
-            <span>PostgreSQL</span>
-            <span>MySQL</span>
-            <span>Firebase</span>
-            <span>Docker</span>
-            <span>Figma</span>
-            <span>AWS</span>
-            <span>Google Cloud</span>
+          <p className={styles.description}>
+            Empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo. Me adapto a cualquier
+            proyecto y reto que me propongan.
+          </p>
+          <p className={styles.description}>
+            Soy de la idea que el conocimiento es para compartirlo, por lo que me gusta enseñar y aprender de los demás.
           </p>
           <a href="https://drive.google.com/file/d/1IVSy7B3A1WU8Z1p8bhQcS7O1HwE30Udf/view?usp=sharing" target="_blank"
              rel="noreferrer">
