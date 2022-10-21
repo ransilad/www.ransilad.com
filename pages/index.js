@@ -11,6 +11,7 @@ import Portfolio from 'components/portfolio'
 import ContactMeSimple from 'components/contactMeSimple'
 import ContactMe from 'components/contactMe'
 import SoftSkills from 'components/softSkills'
+import HardSkills from 'components/hardSkills'
 
 export default function Home () {
   const { asPath } = useRouter()
@@ -44,6 +45,7 @@ export default function Home () {
         <AboutMe/>
       </div>
       <SoftSkills/>
+      <HardSkills/>
       <div ref={portfolioRef}>
         <Portfolio/>
       </div>
