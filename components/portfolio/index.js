@@ -114,6 +114,12 @@ const PORTFOLIO_ITEMS = [{
   title: 'Contact Center',
   image: '/images/portfolio/cover/bch-contact-center.png',
   topic: 'Banca'
+}, {
+  id: 'svp-condominio',
+  category: ['all', 'web'],
+  title: 'SVP Condominio',
+  image: '/images/portfolio/cover/svp-condominio.png',
+  topic: 'Condominios'
 }]
 
 function Portfolio () {
