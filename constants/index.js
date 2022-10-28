@@ -146,7 +146,7 @@ export const PORTFOLIO_ITEMS = [{
   image: '/images/portfolio/cover/bch-contact-center.png',
   topic: 'Banca',
   tags: ['Angular 9', 'HTML', 'CSS', 'JavaScript', 'Bitbucket', 'SonarQube'],
-  description: 'Sistema bancario que permite gestionar las llamadas telefónicas de los clientes.'
+  description: 'Sistema bancario que permite gestionar las llamadas telefónicas realizada por los clientes.'
 }, {
   id: 'svp-condominio',
   category: ['all', 'web'],
