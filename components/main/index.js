@@ -39,18 +39,13 @@ function Main () {
           </p>
         </div>
         <div className={styles.imageContainer}>
-          <div className={styles.profileImage}>
-            <div className={styles.preImage}>
-              <Image
-                src="/images/abelRangel.png"
-                alt=""
-                width={300}
-                height={300}
-                layout='responsive'
-                priority={true}
-              />
-            </div>
-          </div>
+          <Image
+            src="/images/abelRangel.png"
+            alt=""
+            width={300}
+            height={300}
+            priority={true}
+          />
         </div>
       </div>
     </div>

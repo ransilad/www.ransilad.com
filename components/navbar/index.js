@@ -66,10 +66,8 @@ function Navbar () {
   const renderMenuDesktop = useMemo(() => {
     return (
       MENU.map((item, i) => (
-        <Link href={item.href} key={i}>
-          <a className={styles.navbar_item}>
-            {item.label}
-          </a>
+        <Link href={item.href} key={i} className={styles.navbar_item}>
+          {item.label}
         </Link>
       ))
     )
@@ -93,7 +91,7 @@ function Navbar () {
         <div className={styles.navbar_menu}>
           <div className={styles.logo}>
             <Link href={'/#home'}>
-              <a><Logo width={80}/></a>
+              <Logo width={80}/>
             </Link>
           </div>
           <div className={styles.openMobileMenu}>

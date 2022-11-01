@@ -15,18 +15,11 @@
     width: 30%;
 }
 
-.profileImage {
-    border: 20px solid rgba(0, 0, 0, 0.07);
-    border-radius: 50%;
-}
-
-.profileImage .preImage {
+.content .imageContainer img {
     border: 20px solid rgba(0, 0, 0, 0.17);
     border-radius: 50%;
-}
-
-.profileImage img {
-    border-radius: 50%;
+    width: 100%;
+    height: auto;
 }
 
 .bubble {

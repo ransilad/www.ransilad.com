@@ -12,6 +12,11 @@
     width: 30%;
 }
 
+.imageContainer img {
+    width: 100%;
+    height: auto;
+}
+
 .informationContainer {
     display: flex;
     flex-direction: column;

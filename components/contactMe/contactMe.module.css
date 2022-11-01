@@ -71,6 +71,11 @@
     width: 60%;
 }
 
+.card .image img {
+    width: 100%;
+    height: auto;
+}
+
 .card p {
     font-size: 1rem;
     margin-bottom: .5rem;

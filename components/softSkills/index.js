@@ -62,7 +62,6 @@ function SoftSkills () {
                 width={softSkill.image.width}
                 height={softSkill.image.height}
                 alt=""
-                layout="responsive"
               />
             </div>
             <p className={styles.cardTitle}>{softSkill.title}</p>

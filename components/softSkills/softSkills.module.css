@@ -50,6 +50,11 @@
     width: 50%;
 }
 
+.cardImage img {
+    width: 100%;
+    height: auto;
+}
+
 .cardTitle {
     font-size: 1rem;
     font-weight: 300;

@@ -40,7 +40,6 @@ function Testimonials () {
                 src={testimonial.image}
                 width={500}
                 height={500}
-                layout="responsive"
                 alt=""
                 quality={50}
               />

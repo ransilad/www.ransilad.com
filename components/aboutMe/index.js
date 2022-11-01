@@ -12,7 +12,6 @@ function AboutMe () {
             src="/images/developer.svg"
             width={850}
             height={740}
-            layout="responsive"
             alt=""
           />
         </div>
