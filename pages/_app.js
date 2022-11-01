@@ -25,7 +25,7 @@ function MyApp ({ Component, pageProps }) {
         <meta property="og:title" content="Abel Rangel"/>
         <meta property="og:description"
               content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"/>
-        <meta property="og:image" content="https://www.ransilad.com/cover.jpg"/>
+        <meta property="og:image" content="https://www.ransilad.com/cover.webp"/>
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image"/>
@@ -34,7 +34,7 @@ function MyApp ({ Component, pageProps }) {
         <meta name="twitter:title" content="Abel Rangel"/>
         <meta name="twitter:description"
               content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"/>
-        <meta name="twitter:image" content="https://www.ransilad.com/cover.jpg"/>
+        <meta name="twitter:image" content="https://www.ransilad.com/cover.webp"/>
       </Head>
       <Component {...pageProps} />
     </>

@@ -1,5 +1,5 @@
 .contactMeContainerWithImage {
-    background: url("/images/contact-me-bg.jpeg");
+    background: url("/images/contact-me-bg.webp");
     background-size: cover;
     display: flex;
     flex-direction: row;

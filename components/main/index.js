@@ -40,7 +40,7 @@ function Main () {
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src="/images/abelRangel.png"
+            src="/images/abelRangel.webp"
             alt=""
             width={300}
             height={300}
