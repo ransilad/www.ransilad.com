@@ -32,6 +32,7 @@ import GTMIcon from '../icons/skills/gtm'
 import GAIcon from '../icons/skills/ga'
 import GulpIcon from '../icons/skills/gulp'
 import NetlifyIcon from '../icons/skills/netlify'
+import TailwindIcon from '../icons/skills/tailwind'
 
 const HARD_SKILLS = [{
   title: 'HTML5',
@@ -63,6 +64,9 @@ const HARD_SKILLS = [{
 }, {
   title: 'Bootstrap',
   image: <BootstrapIcon fill="#7952B3"/>
+}, {
+  title: 'TailwindCSS',
+  image: <TailwindIcon fill="#06B6D4"/>
 }, {
   title: 'Python',
   image: <PythonIcon fill="#3776AB"/>

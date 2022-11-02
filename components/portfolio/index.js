@@ -28,7 +28,7 @@ function Portfolio () {
             .sort((a, b) => a.title.localeCompare(b.title))
             .map(item => (
               <div className={styles.portfolioItem} key={item.id}>
-                <Image src={item.image} width={500} height={300} alt=""/>
+                <Image src={item.image} width={500} height={279} alt=""/>
                 <div className={styles.portfolioItemContent}>
                   <h3>{item.title}</h3>
                   <p>{item.description || ''}</p>
