@@ -18,7 +18,7 @@
 
 .navbar.scrolled {
     backdrop-filter: blur(3px);
-    background-color: #ffffffd4;
+    background-color: var(--color-bg-navbar);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -55,7 +55,7 @@
 
 .navbar_item {
     border-bottom: transparent 2px solid;
-    color: #333;
+    color: var(--color-text);
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
@@ -63,7 +63,10 @@
 
 .navbar_item:hover {
     border-bottom: var(--color-primary) 2px solid;
-    color: #252525;
+}
+
+.lightIcon svg {
+    fill: var(--color-light-icon);
 }
 
 @media (max-width: 768px) {
@@ -76,6 +79,8 @@
     }
 
     .openMobileMenu {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
     }
 }

@@ -56,6 +56,10 @@
     margin-top: 0;
 }
 
+.informationItems svg {
+    fill: var(--color-text)
+}
+
 .RRSSIcons {
     display: flex;
     gap: .8rem;

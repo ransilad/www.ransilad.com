@@ -9,6 +9,7 @@
 
 .contactMeContainerWithImage:before {
     backdrop-filter: blur(10px);
+    background-color: var(--color-bg-contactme);
     bottom: 0;
     content: '';
     left: 0;
@@ -34,7 +35,7 @@
 }
 
 .contactMeContainer {
-    background-color: #ffffff;
+    background-color: var(--color-bg-light);
     padding: 5rem 0;
 }
 

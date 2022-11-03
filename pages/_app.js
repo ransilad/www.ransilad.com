@@ -2,8 +2,14 @@ import Head from 'next/head'
 
 import 'aos/dist/aos.css'
 import '../styles/globals.css'
+import { useEffect } from 'react'
 
 function MyApp ({ Component, pageProps }) {
+  useEffect(() => {
+    if (JSON.parse(window.localStorage.getItem('darkMode') || 'false')) {
+      document.querySelector('html').classList.add('dark')
+    }
+  }, [])
   return (
     <>
       <Head>

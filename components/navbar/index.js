@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Logo from 'components/logo'
 import styles from './navbar.module.css'
 import MobileMenuIcon from '../icons/mobileMenu'
+import LightIcon from 'components/icons/light'
 
 const MENU = [{
   label: 'Inicio',
@@ -85,6 +86,12 @@ function Navbar () {
     )
   }, [handleChangePage])
 
+  const handleDarkMode = () => {
+    const html = document.querySelector('html')
+    window.localStorage.setItem('darkMode', !JSON.parse(window.localStorage.getItem('darkMode') || 'false'))
+    html.classList.toggle('dark')
+  }
+
   return (
     <div className={`${styles.navbar} ${showMenuClass} ${scrolled ? styles.scrolled : ''}`}>
       <div className="container">
@@ -95,12 +102,18 @@ function Navbar () {
             </Link>
           </div>
           <div className={styles.openMobileMenu}>
+            <div className={styles.lightIcon} onClick={handleDarkMode}>
+              <LightIcon width={30} height={30}/>
+            </div>
             <span onClick={handleShowMenu}>
               <MobileMenuIcon fill="#49be7e"/>
             </span>
           </div>
           <div className={styles.navbar_items}>
             {renderMenuDesktop}
+            <div className={styles.lightIcon} onClick={handleDarkMode}>
+              <LightIcon width={20} height={20}/>
+            </div>
           </div>
         </div>
       </div>
