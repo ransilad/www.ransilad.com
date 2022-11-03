@@ -10,7 +10,6 @@ const LinkedInIcon = (props) => (
       clipRule="evenodd"
       cx={16}
       cy={16}
-      fill="#007BB5"
       fillRule="evenodd"
       r={16}
     />

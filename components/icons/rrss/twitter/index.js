@@ -10,7 +10,6 @@ const TwitterIcon = (props) => (
       clipRule="evenodd"
       cx={16}
       cy={16}
-      fill="#55ACEE"
       fillRule="evenodd"
       r={16}
     />

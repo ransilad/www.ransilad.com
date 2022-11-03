@@ -16,10 +16,10 @@
 }
 
 .content .imageContainer img {
-    border: 20px solid rgba(0, 0, 0, 0.17);
+    border: 20px solid var(--color-border-img-main);
     border-radius: 50%;
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .bubble {
@@ -63,6 +63,14 @@
 .RRSSIcons {
     display: flex;
     gap: .8rem;
+}
+
+.RRSSIcons svg {
+    fill: #545454;
+}
+
+.RRSSIcons svg:hover {
+    fill: var(--color-primary);
 }
 
 @media (max-width: 768px) {

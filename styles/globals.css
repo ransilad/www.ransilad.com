@@ -9,6 +9,7 @@
     --color-text-light: #959595;
     --color-bg-contactme: transparent;
     --color-light-icon: #ddc216;
+    --color-border-img-main: #0000002B;
 }
 
 .dark {
@@ -21,6 +22,7 @@
     --color-text-light: #c5c5c5;
     --color-bg-contactme: #2f2f2faf;
     --color-light-icon: #959595;
+    --color-border-img-main: #3f3f3f;
 }
 
 html,
@@ -45,5 +47,11 @@ a {
 .container {
     margin: 0 auto;
     max-width: 1140px;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 0 3rem;
+    }
 }
