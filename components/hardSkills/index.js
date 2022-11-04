@@ -33,6 +33,7 @@ import GAIcon from '../icons/skills/ga'
 import GulpIcon from '../icons/skills/gulp'
 import NetlifyIcon from '../icons/skills/netlify'
 import TailwindIcon from '../icons/skills/tailwind'
+import AstroIcon from '../icons/skills/astro'
 
 const HARD_SKILLS = [{
   title: 'HTML5',
@@ -58,6 +59,9 @@ const HARD_SKILLS = [{
 }, {
   title: 'Svelte',
   image: <SvelteIcon fill="#FF3E00"/>
+}, {
+  title: 'Astro',
+  image: <AstroIcon fill="#FF5D01"/>
 }, {
   title: 'Ionic',
   image: <IonicIcon fill="#3880FF"/>

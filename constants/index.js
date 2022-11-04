@@ -166,6 +166,15 @@ export const PORTFOLIO_ITEMS = [{
   url: 'https://arrows.santiagosport.cl/',
   tags: ['Nextjs', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
   description: 'Sitio web para la empresa Arrows Santiago Sports.'
+}, {
+  id: 'blog-arrows-sports',
+  category: ['all', 'web'],
+  title: 'Blog Arrows Santiago Sports',
+  image: '/images/portfolio/blog-arrows-sports.avif',
+  topic: 'Gimnasio',
+  url: 'https://blog.arrows.santiagosport.cl/',
+  tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
+  description: 'Blog para la empresa Arrows Santiago Sports.'
 }]
 
 export const TESTIMONIALS = [{
