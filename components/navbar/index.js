@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
-import Logo from 'components/logo'
 import styles from './navbar.module.css'
 import MobileMenuIcon from '../icons/mobileMenu'
 
@@ -97,7 +97,8 @@ function Navbar () {
         <div className={styles.navbar_menu}>
           <div className={styles.logo}>
             <Link href={'/#home'}>
-              <Logo width={80}/>
+              <Image src="/images/logo.svg" width={80} height={40} alt=""/>
+              <Image src="/images/logo_white.svg" width={80} height={40} alt=""/>
             </Link>
           </div>
           <div className={styles.openMobileMenu}>

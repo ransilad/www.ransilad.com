@@ -47,6 +47,22 @@
     user-select: none;
 }
 
+.logo img:first-child {
+    display: block;
+}
+
+html[class='dark'] .logo img:first-child {
+    display: none;
+}
+
+.logo img:last-child {
+    display: none;
+}
+
+html[class='dark'] .logo img:last-child {
+    display: block;
+}
+
 .navbar_items {
     align-items: center;
     display: flex;
