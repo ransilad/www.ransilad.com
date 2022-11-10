@@ -48,6 +48,7 @@
 }
 
 .navbar_items {
+    align-items: center;
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -65,8 +66,13 @@
     border-bottom: var(--color-primary) 2px solid;
 }
 
-.lightIcon svg {
-    fill: var(--color-light-icon);
+.lightIcon::after {
+    content: "🌞";
+    font-size: 2rem;
+}
+
+html[class='dark'] .lightIcon::after {
+    content: "🌚" !important;
 }
 
 @media (max-width: 768px) {
@@ -79,8 +85,8 @@
     }
 
     .openMobileMenu {
-        display: flex;
         align-items: center;
+        display: flex;
         gap: 1.5rem;
     }
 }
