@@ -7,7 +7,7 @@ function Footer () {
     <footer className="container">
       <div className={styles.footer}>
         <p className={styles.footerText}>Todos los derechos reservados</p>
-        <p className={styles.footerText}>Abel Rangel @ 2022</p>
+        <p className={styles.footerText}>Abel Rangel @ 2023</p>
       </div>
     </footer>
   )
