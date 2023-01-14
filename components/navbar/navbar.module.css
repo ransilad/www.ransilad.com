@@ -82,6 +82,10 @@ html[class='dark'] .logo img:last-child {
     border-bottom: var(--color-primary) 2px solid;
 }
 
+.lightIcon {
+    cursor: pointer;
+}
+
 .lightIcon::after {
     content: "🌞";
     font-size: 2rem;
