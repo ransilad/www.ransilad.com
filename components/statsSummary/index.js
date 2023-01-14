@@ -14,7 +14,7 @@ function StatsSummary () {
             <ExperienceIcon width={60} height={60} fill="#515151"/>
           </div>
           <div>
-            <span>9+ años</span>
+            <span>+10 años</span>
             <p>Experiencia</p>
           </div>
         </div>
@@ -24,7 +24,7 @@ function StatsSummary () {
             <ProjectsIcon width={60} height={60} fill="#515151"/>
           </div>
           <div>
-            <span>30+ proyectos</span>
+            <span>+30 proyectos</span>
             <p>Completados</p>
           </div>
         </div>
