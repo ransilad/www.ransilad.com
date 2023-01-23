@@ -116,39 +116,7 @@ export const PORTFOLIO_ITEMS = [{
   topic: 'Ventas',
   tags: ['Angular 12', 'JavaScript', 'HTML', 'CSS', 'Ionic', 'Bootstrap', 'Github'],
   description: 'Plataforma que permite gestionar productos.'
-}, /* {
-  id: 'switchmultimpresor',
-  category: ['all', 'web'],
-  title: 'Switch Multi Impresor',
-  image: '/images/portfolio/cover/bch_switchmultimpresor.webp',
-  topic: 'Banca',
-  tags: ['Angular 9', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Bitbucket'],
-  description: 'Sistema bancario que permite gestionar proveedores.'
 }, {
-  id: 'cobranzas',
-  category: ['all', 'web'],
-  title: 'Cobranzas',
-  image: '/images/portfolio/cover/bch-cobranzas.webp',
-  topic: 'Banca',
-  tags: ['AngularJS', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Bitbucket', 'Grunt'],
-  description: 'Sistema bancario que permite gestionar cobros no realizados por los clientes.'
-}, {
-  id: 'agendamiento',
-  category: ['all', 'web'],
-  title: 'Agendamiento',
-  image: '/images/portfolio/cover/bch-agendamiento.webp',
-  topic: 'Banca',
-  tags: ['AngularJS', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Bitbucket', 'Grunt'],
-  description: 'Sistema bancario que permite gestionar el agendamiento interno de los recursos.'
-}, {
-  id: 'contact-center',
-  category: ['all', 'web'],
-  title: 'Contact Center',
-  image: '/images/portfolio/cover/bch-contact-center.webp',
-  topic: 'Banca',
-  tags: ['Angular 9', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Bitbucket', 'SonarQube'],
-  description: 'Sistema bancario que permite gestionar las llamadas telefónicas realizada por los clientes.'
-}, */ {
   id: 'svp-condominio',
   category: ['all', 'web'],
   title: 'SVP Condominio',
@@ -175,6 +143,24 @@ export const PORTFOLIO_ITEMS = [{
   url: 'https://blog.arrows.santiagosport.cl/',
   tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
   description: 'Blog para la empresa Arrows Santiago Sports.'
+}, {
+  id: 'games-ransilad',
+  category: ['all', 'web'],
+  title: 'Juegos',
+  image: '/images/portfolio/games-ransilad.avif',
+  topic: 'Games',
+  url: 'https://games.ransilad.com/',
+  tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
+  description: 'Página web que junta diferentes juegos creados por mi (Abel Rangel).'
+}, {
+  id: 'tres-en-raya-ransilad',
+  category: ['all', 'web'],
+  title: 'Juego Tres en Raya',
+  image: '/images/portfolio/tres-en-raya-ransilad.avif',
+  topic: 'Games',
+  url: 'https://tres-en-raya.ransilad.com/',
+  tags: ['ReactJS', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS', 'Vite', 'Firebase', 'Realtime Database'],
+  description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.'
 }]
 
 export const TESTIMONIALS = [{
