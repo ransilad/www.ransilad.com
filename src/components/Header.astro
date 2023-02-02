@@ -2,12 +2,57 @@
     <a href="/#home">
         <img src="/images/logo.svg" alt="Abel Rangel Logo" width="100">
     </a>
-    <nav class="hidden md:block">
-        <ul class="flex gap-6 font-semibold">
-            <li class="border-b-2 border-transparent hover:border-primary"><a href="/#home">Inicio</a></li>
-            <li class="border-b-2 border-transparent hover:border-primary"><a href="/#about">Acerca de mi</a></li>
-            <li class="border-b-2 border-transparent hover:border-primary"><a href="/#portfolio">Portafolio</a></li>
-            <li class="border-b-2 border-transparent hover:border-primary"><a href="/#contact">Contacto</a></li>
+    <span id="menu" class="block md:hidden z-10">
+        <img id="open-menu" src="/icons/openMenuMobile.svg" alt="" width="40">
+        <img id="close-menu" class="hidden" src="/icons/closeMenuMobile.svg" alt="" width="40">
+    </span>
+    <nav class="absolute top-0 bottom-0 right-0 justify-center items-center left-0 md:relative md:block bg-gray-900 md:bg-transparent bg-opacity-60 md:bg-opacity-0 backdrop-blur-md md:backdrop-blur-0">
+        <ul class="flex gap-6 font-semibold flex-col md:flex-row text-center md:text-start">
+            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#home">Inicio</a></li>
+            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#about">Acerca de mi</a></li>
+            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#portfolio">Portafolio</a></li>
+            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#contact">Contacto</a></li>
         </ul>
     </nav>
 </header>
+
+<script>
+    // Función para validar el tamaño de la pantalla y mostrar el menú
+    function validateMenu () {
+        if (window.innerWidth < 640) {
+            if (document.body.style.overflowY !== 'hidden') {
+                document.querySelector('nav').classList.add('hidden');
+            } else {
+                document.querySelector('nav').classList.add('flex');
+            }
+        } else {
+            document.querySelector('nav').classList.remove('flex');
+            document.body.style.overflowY = 'auto';
+        }
+    }
+    window.addEventListener("resize", validateMenu);
+    validateMenu();
+
+    // Función para mostrar/ocultar el menú en dispositivos móviles cuando se le da click al botón
+    document.querySelector('#menu').addEventListener('click', () => {
+        document.querySelector('nav').classList.toggle('hidden');
+        document.querySelector('nav').classList.toggle('flex');
+        document.querySelector('#open-menu').classList.toggle('hidden');
+        document.querySelector('#close-menu').classList.toggle('hidden');
+        document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden';
+    });
+
+    // Ocultar el menú cuando se le da click a un enlace del nav
+    const $navbar = document.querySelector('nav')
+    $navbar.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', (_event) => {
+            if (window.innerWidth < 640) {
+                document.querySelector('nav').classList.toggle('hidden');
+                document.querySelector('nav').classList.toggle('flex');
+                document.querySelector('#open-menu').classList.toggle('hidden');
+                document.querySelector('#close-menu').classList.toggle('hidden');
+                document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden';
+            }
+        })
+    })
+</script>
