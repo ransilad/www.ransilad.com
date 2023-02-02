@@ -1,0 +1,21 @@
+---
+import Container from "./utils/Container.astro";
+
+---
+
+<section id="contact" class="bg-white py-16">
+    <Container>
+        <content class="flex flex-row">
+            <div class="w-1/2 flex flex-col justify-center items-center">
+                <img src="/images/phone_illustrations.svg" width={266} height={213} alt=""/>
+                <p class="mt-10">Llámame</p>
+                <a href="tel:+56930627603" target="_blank" rel="noreferrer" class="text-primary font-semibold">+56930627603</a>
+            </div>
+            <div class="w-1/2 flex flex-col justify-center items-center">
+                <img src="/images/mail_illustrations.svg" width={266} height={221} alt=""/>
+                <p class="mt-10">Envíame un correo electrónico</p>
+                <a href="mailto:abeld.rangels@gmail.com" target="_blank" rel="noreferrer" class="text-primary font-semibold">abeld.rangels@gmail.com</a>
+            </div>
+        </content>
+    </Container>
+</section>
