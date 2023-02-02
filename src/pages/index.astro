@@ -1,4 +1,5 @@
 ---
+import AboutMe from '@components/AboutMe.astro';
 import Landing from '@components/Landing.astro';
 import './index.css'
 ---
@@ -12,6 +13,9 @@ import './index.css'
 		<title>Abel Rangel</title>
 	</head>
 	<body>
-		<Landing />
+		<div class="w-10/12 lg:w-3/4 xl:w-2/4 mx-auto">
+			<Landing />
+			<AboutMe />
+		</div>
 	</body>
 </html>
