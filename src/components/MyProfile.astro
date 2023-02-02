@@ -1,0 +1,43 @@
+---
+import Github from "@icons/Github.astro";
+import LinkedIn from "@icons/LinkedIn.astro";
+import Mail from "@icons/Mail.astro";
+import Phone from "@icons/Phone.astro";
+import Twitter from "@icons/Twitter.astro";
+---
+
+<content class="flex flex-col md:flex-row my-auto items-center">
+    <div class="md:w-1/2 flex flex-col order-2 md:order-1 items-center md:items-start">
+        <div class="bg-primary w-fit px-4 py-2 rounded-t-full rounded-r-full text-white font-bold">
+            Hola, soy
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-10">Abel Rangel</h1>
+        <h2 class="text-xl md:text-2xl font-normal">
+            Desarrollador Fullstack
+        </h2>
+        <div class="mt-6 flex flex-col items-center md:items-start">
+            <div class="flex gap-3 items-center">
+                <Mail />
+                <a href="mailto:abeld.rangels@gmail.com" target="_blank" rel="noreferrer">abeld.rangels@gmail.com</a>
+            </div>
+            <div class="flex gap-3 items-center">
+                <Phone />
+                <a href="tel:+56930627603" target="_blank" rel="noreferrer">+56930627603</a>
+            </div>
+        </div>
+        <div class="mt-6 flex gap-2">
+            <a href="https://www.linkedin.com/in/ransilad" target='_blank' rel="noreferrer">
+                <LinkedIn />
+            </a>
+            <a href="https://github.com/ransilad" target='_blank' rel="noreferrer">
+                <Github />
+            </a>
+            <a href="https://twitter.com/ransilad" target='_blank' rel="noreferrer">
+                <Twitter />
+            </a>
+        </div>
+    </div>
+    <div class="w-4/5 md:w-1/3 mx-auto order-1 md:order-2 my-16 md:my-0">
+        <img class="rounded-full border-gray-300 border-[20px]" src="/images/abelRangel.webp" alt="Abel Rangel">
+    </div>
+</content>
