@@ -1,0 +1,193 @@
+---
+import ArrowRight from "@icons/ArrowRight.astro";
+import Container from "./utils/Container.astro";
+
+export const PORTFOLIO_ITEMS = [{
+    id: 'inlet',
+    category: ['all', 'web', 'mobile'],
+    title: 'Inlet',
+    image: '/images/portfolio/inlet.avif',
+    topic: 'Comunidades',
+    tags: ['ReactJS', 'React Native', 'JavaScript', 'HTML', 'CSS', 'AWS', 'Gitlab', 'Google Analytics', 'Google Tag Manager'],
+    description: 'Plataforma que facilita la conexión entre comunidades.'
+}, {
+    id: 'voyhoy',
+    category: ['all', 'web', 'api'],
+    title: 'Voyhoy',
+    image: '/images/portfolio/voyhoy.avif',
+    topic: 'Viajes',
+    tags: ['AngularJS', 'JavaScript', 'HTML', 'CSS', 'Python', 'PostgreSQL', 'AWS', 'Github', 'Adyen', 'PayU', 'Paypal', 'Voucherify', 'Optimizely'],
+    description: 'Plataforma que permite a los usuarios planificar sus viajes, incluyendo la posibilidad de ' +
+    'conexiones entre diferentes tipos de transporte, lo que denominamos Smart Ticket.'
+}, {
+    id: 'damath',
+    category: ['all', 'web'],
+    title: 'Damath',
+    image: '/images/portfolio/damath.avif',
+    topic: 'Diseño',
+    tags: ['Design', 'HTML', 'CSS', 'Wordpress'],
+    description: 'Sitio web para gestionar ventas de productos cortados con láser.'
+}, {
+    id: 'techk',
+    category: ['all', 'web', 'api'],
+    title: 'techk',
+    image: '/images/portfolio/techk.avif',
+    topic: 'Ventas',
+    url: 'https://www.instoreview.com/inicio',
+    tags: ['Nextjs', 'JavaScript', 'HTML', 'CSS', 'Python', 'Docker'],
+    description: 'Plataforma que permite clasificar los productos que entran a las tiendas.'
+}, {
+    id: 'cocha',
+    category: ['all', 'web', 'api'],
+    title: 'Cocha',
+    image: '/images/portfolio/cocha.avif',
+    topic: 'Viajes',
+    url: 'https://www.cocha.com/',
+    tags: ['Angular 7', 'JavaScript', 'Bootstrap', 'HTML', 'CSS', 'NodeJS', 'Bitbucket', 'MySql'],
+    description: 'Sistema web que ayudar a los vendedores a gestionar los pasajes de sus clientes.'
+}, {
+    id: 'tendy',
+    category: ['all', 'web', 'api', 'mobile'],
+    title: 'Tendy',
+    image: '/images/portfolio/tendy.avif',
+    topic: 'Finanzas',
+    url: 'https://tendy.cash/',
+    tags: ['VueJS', 'React Native', 'JavaScript', 'HTML', 'CSS', 'NodeJS', 'AWS', 'Github'],
+    description: 'Plataforma que permite “Otorgar propinas de una forma fácil y anónima”.'
+}, {
+    id: 'idc',
+    category: ['all', 'web'],
+    title: 'IDC',
+    image: '/images/portfolio/idc.avif',
+    topic: 'Comunidades',
+    tags: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'AWS', 'Github'],
+    description: 'Sistema de gestión de contenido y educación.'
+}, {
+    id: 'a21',
+    category: ['all', 'mobile'],
+    title: 'A21',
+    image: '/images/portfolio/a21.avif',
+    topic: 'Viajes',
+    url: 'https://www.antarctica21.com/',
+    tags: ['React Native', 'JavaScript', 'HTML', 'CSS', 'Redux'],
+    description: 'Aplicación móvil que permite gestionar toda la experiencia del viaje, desde la reserva hasta el check-out'
+}, {
+    id: 'dtemite',
+    category: ['all', 'mobile', 'api'],
+    title: 'Dtemite',
+    image: '/images/portfolio/dtemite.avif',
+    topic: 'Finanzas',
+    url: 'https://www.dtemite.cl/',
+    tags: ['Python', 'Flask', 'React Native', 'JavaScript', 'HTML', 'CSS', 'Redux', 'Bitbucket', 'Redis'],
+    description: 'ERP que centraliza la información referente al SII en un solo sitio.'
+}, {
+    id: 'nrp',
+    category: ['all', 'web'],
+    title: 'NextRoundPartners',
+    image: '/images/portfolio/nrp.avif',
+    topic: 'Diseño',
+    url: 'https://www.nextroundpartners.com/',
+    tags: ['ReactJS', 'JavaScript', 'Design', 'HTML', 'CSS', 'Bootstrap'],
+    description: 'Sitio web para la empresa NextRoundPartners.'
+}, {
+    id: 'ona',
+    category: ['all', 'web'],
+    title: 'OnaStudio',
+    image: '/images/portfolio/ona.avif',
+    topic: 'Diseño',
+    url: 'https://www-onastudio-co.vercel.app/',
+    tags: ['NextJS', 'JavaScript', 'Design', 'HTML', 'CSS'],
+    description: 'Sitio web para la empresa OnaStudio.'
+}, {
+    id: 'lopesa',
+    category: ['all', 'web', 'mobile'],
+    title: 'Lopesa',
+    image: '/images/portfolio/lopesa.avif',
+    topic: 'Ventas',
+    tags: ['Angular 12', 'JavaScript', 'HTML', 'CSS', 'Ionic', 'Bootstrap', 'Github'],
+    description: 'Plataforma que permite gestionar productos.'
+}, {
+    id: 'svp-condominio',
+    category: ['all', 'web'],
+    title: 'SVP Condominio',
+    image: '/images/portfolio/svp-condominio.avif',
+    topic: 'Condominios',
+    url: 'https://condominio-svp.vercel.app/',
+    tags: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Github'],
+    description: 'Plataforma que permite gestionar toda la información de su condominio.'
+}, {
+    id: 'arrows-sports',
+    category: ['all', 'web'],
+    title: 'Arrows Santiago Sports',
+    image: '/images/portfolio/arrows-sports.avif',
+    topic: 'Gimnasio',
+    url: 'https://arrows.santiagosport.cl/',
+    tags: ['Nextjs', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
+    description: 'Sitio web para la empresa Arrows Santiago Sports.'
+}, {
+    id: 'blog-arrows-sports',
+    category: ['all', 'web'],
+    title: 'Blog Arrows Santiago Sports',
+    image: '/images/portfolio/blog-arrows-sports.avif',
+    topic: 'Gimnasio',
+    url: 'https://blog.arrows.santiagosport.cl/',
+    tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
+    description: 'Blog para la empresa Arrows Santiago Sports.'
+}, {
+    id: 'games-ransilad',
+    category: ['all', 'web'],
+    title: 'Juegos',
+    image: '/images/portfolio/games-ransilad.avif',
+    topic: 'Games',
+    url: 'https://games.ransilad.com/',
+    tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
+    description: 'Página web que junta diferentes juegos creados por mi (Abel Rangel).'
+}, {
+    id: 'tres-en-raya-ransilad',
+    category: ['all', 'web'],
+    title: 'Juego Tres en Raya',
+    image: '/images/portfolio/tres-en-raya-ransilad.avif',
+    topic: 'Games',
+    url: 'https://tres-en-raya.ransilad.com/',
+    tags: ['ReactJS', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS', 'Vite', 'Firebase', 'Realtime Database'],
+    description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.'
+}]
+
+---
+
+<section id="portfolio" class="bg-concrete py-20">
+    <Container>
+        <h2 class="text-3xl font-bold text-center">Portafolio</h2>
+        <content class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            {PORTFOLIO_ITEMS
+                .sort((a, b) => a.title.localeCompare(b.title))
+                .map(item => (
+                    <div class="rounded-lg bg-white shadow-md flex flex-col border border-concrete hover:border-primary">
+                        <img class="rounded-t-lg" src={item.image} width={500} height={279} alt={item.title}/>
+                        <div class="p-5">
+                            <h3 class="font-semibold mt-2">{item.title}</h3>
+                            <p class="text-md font-light mt-4">{item.description || ''}</p>
+                            <div class="flex gap-2 flex-wrap mt-6 text-[.7rem]">
+                                {item.tags.map((tag, index) => (
+                                    <span class="bg-primary rounded-full px-2 py-1 text-white">{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+                        <div class="mt-auto ml-auto p-5">
+                            {item.url && (
+                                <a
+                                    href={item.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="text-sm font-semibold flex flex-row flex-nowrap gap-2"
+                                >
+                                    Visitar sitio <ArrowRight />
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                ))
+            }
+        </content>
+    </Container>
+</section>
