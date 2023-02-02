@@ -1,0 +1,49 @@
+---
+import TitleWithLine from "./utils/TitleWithLine.astro";
+
+const SOFT_SKILLS = [{
+    title: 'Actitud positiva en el sitio de trabajo',
+    image: {
+        src: '/images/positive_attitude_illustration.svg'
+    }
+}, {
+    title: 'Actitudes para trabajo en equipo y liderazgo',
+    image: {
+        src: '/images/teamwork_illustration.svg'
+    }
+}, {
+    title: 'Facilidad para comunicarme',
+    image: {
+        src: '/images/communication_illustration.svg'
+    }
+}, {
+    title: 'Capacidad para administrar el tiempo, aceptar y aprender de las críticas',
+    image: {
+        src: '/images/time_management_illustrations.svg'
+    }
+}, {
+    title: 'Rápida adaptación a los cambios y tolerancia al trabajo bajo presión',
+    image: {
+        src: '/images/work_under_pressure_illustration.svg'
+    }
+}, {
+    title: 'Me encanta aprender cosas nuevas o herramientas todos los días. Si no sé algo lo aprenderé',
+    image: {
+        src: '/images/online_learning_illustration.svg'
+    }
+}]
+
+---
+<section class="my-28">
+    <TitleWithLine>
+        Habilidades blandas
+    </TitleWithLine>
+    <content class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        {SOFT_SKILLS.map((softSkill, index) => (
+            <div class="flex flex-col items-center justify-end rounded-lg border p-10 shadow-md hover:border-primary">
+                <img class="w-2/3" src={softSkill.image.src} alt=""/>
+                <p class="text-center mt-8">{softSkill.title}</p>
+            </div>
+        ))}
+    </content>
+</section>
