@@ -10,11 +10,14 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-        alabaster: '#F8F8F8',
-        concrete: '#F3F3F3',
+				alabaster: '#F8F8F8',
+				concrete: '#F3F3F3',
 				primary: '#49be7e',
 				emperor: '#515151',
-      }
+			},
+			backgroundImage: {
+				'contact-me-banner': "url('/images/contact-me-banner.webp')",
+			}
 		},
 	},
 	plugins: [],
