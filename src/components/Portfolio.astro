@@ -1,5 +1,6 @@
 ---
 import ArrowRight from "@icons/ArrowRight.astro";
+import Ribbon from "./Ribbon.astro";
 import Container from "./utils/Container.astro";
 
 export const PORTFOLIO_ITEMS = [{
@@ -108,6 +109,7 @@ export const PORTFOLIO_ITEMS = [{
     description: 'Plataforma que permite gestionar productos.'
 }, {
     id: 'svp-condominio',
+    isPersonal: true,
     category: ['all', 'web'],
     title: 'SVP Condominio',
     image: '/images/portfolio/svp-condominio.avif',
@@ -136,6 +138,7 @@ export const PORTFOLIO_ITEMS = [{
     description: 'Blog para la empresa Arrows Santiago Sports.'
 }, {
     id: 'games-ransilad',
+    isPersonal: true,
     category: ['all', 'web'],
     title: 'Juegos',
     image: '/images/portfolio/games-ransilad.avif',
@@ -146,6 +149,7 @@ export const PORTFOLIO_ITEMS = [{
     githubUrl: 'https://github.com/ransilad/games.ransildad.com'
 }, {
     id: 'tres-en-raya-ransilad',
+    isPersonal: true,
     category: ['all', 'web'],
     title: 'Juego Tres en Raya',
     image: '/images/portfolio/tres-en-raya-ransilad.avif',
@@ -156,6 +160,7 @@ export const PORTFOLIO_ITEMS = [{
     githubUrl: 'https://github.com/ransilad/tres-en-raya.ransilad.com'
 }, {
     id: 'ransilad-portfolio',
+    isPersonal: true,
     category: ['all', 'web'],
     title: 'Mi Portafolio',
     image: '/images/portfolio/ransilad-portfolio.avif',
@@ -166,6 +171,7 @@ export const PORTFOLIO_ITEMS = [{
     githubUrl: 'https://github.com/ransilad/www.ransilad.com'
 }, {
     id: 'syn-ant-definition-finder',
+    isPersonal: true,
     category: ['all', 'web', 'openAI'],
     title: 'Buscador de sinónimos, antónimos y definiciones',
     image: '/images/portfolio/syn-ant-definition-finder.avif',
@@ -185,7 +191,8 @@ export const PORTFOLIO_ITEMS = [{
             {PORTFOLIO_ITEMS
                 .sort((a, b) => a.title.localeCompare(b.title))
                 .map(item => (
-                    <div class="rounded-lg bg-white shadow-md flex flex-col border border-concrete hover:border-primary">
+                    <div class="relative overflow-hidden rounded-lg bg-white shadow-md flex flex-col border border-concrete hover:border-primary">
+                        {item.isPersonal && <Ribbon>Personal</Ribbon>}
                         <img class="rounded-t-lg" src={item.image} width={500} height={279} alt={item.title}/>
                         <div class="p-5">
                             <h3 class="font-semibold mt-2">{item.title}</h3>
