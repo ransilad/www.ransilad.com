@@ -141,7 +141,8 @@ export const PORTFOLIO_ITEMS = [{
     topic: 'Games',
     url: 'https://games.ransilad.com/',
     tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
-    description: 'Página web que junta diferentes juegos creados por mi (Abel Rangel).'
+    description: 'Página web que junta diferentes juegos creados por mi (Abel Rangel).',
+    githubUrl: 'https://github.com/ransilad/games.ransildad.com'
 }, {
     id: 'tres-en-raya-ransilad',
     category: ['all', 'web'],
@@ -150,7 +151,8 @@ export const PORTFOLIO_ITEMS = [{
     topic: 'Games',
     url: 'https://tres-en-raya.ransilad.com/',
     tags: ['ReactJS', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS', 'Vite', 'Firebase', 'Realtime Database'],
-    description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.'
+    description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.',
+    githubUrl: 'https://github.com/ransilad/tres-en-raya.ransilad.com'
 }, {
     id: 'ransilad-portfolio',
     category: ['all', 'web'],
@@ -159,7 +161,18 @@ export const PORTFOLIO_ITEMS = [{
     topic: 'Portfolio',
     url: 'https://www.ransilad.com/',
     tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
-    description: 'Mi portafolio personal.'
+    description: 'Mi portafolio personal.',
+    githubUrl: 'https://github.com/ransilad/www.ransilad.com'
+}, {
+    id: 'syn-ant-definition-finder',
+    category: ['all', 'web', 'openAI'],
+    title: 'Buscador de sinónimos, antónimos y definiciones',
+    image: '/images/portfolio/syn-ant-definition-finder.avif',
+    topic: 'Portfolio',
+    url: 'https://syn-ant-definition-finder.ransilad.com/',
+    tags: ['NextJS', 'JavaScript', 'Design', 'HTML', 'CSS', 'OpenAI'],
+    description: 'Buscador de sinónimos, antónimos y definiciones, el cual hace uso de la API de OpenAI.',
+    githubUrl: 'https://github.com/ransilad/syn-ant-definition-finder'
 }]
 
 ---
@@ -182,17 +195,31 @@ export const PORTFOLIO_ITEMS = [{
                                 ))}
                             </div>
                         </div>
-                        <div class="mt-auto ml-auto p-5">
-                            {item.url && (
-                                <a
-                                    href={item.url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class="text-sm font-semibold flex flex-row flex-nowrap gap-2"
-                                >
-                                    Visitar sitio <ArrowRight />
-                                </a>
+                        <div class="flex mt-auto">
+                            {item.githubUrl && (
+                                <div class="mr-auto p-5">
+                                    <a
+                                        href={item.githubUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="text-sm font-semibold flex flex-row flex-nowrap gap-2"
+                                    >
+                                        Ver código <ArrowRight />
+                                    </a>
+                                </div>    
                             )}
+                            <div class=" ml-auto p-5">
+                                {item.url && (
+                                    <a
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="text-sm font-semibold flex flex-row flex-nowrap gap-2"
+                                    >
+                                        Visitar sitio <ArrowRight />
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))
