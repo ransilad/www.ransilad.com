@@ -11,7 +11,7 @@ module.exports = {
 		extend: {
 			colors: {
 				concrete: '#F3F3F3',
-				primary: '#49be7e',
+				primary: '#00893e',
 				emperor: '#515151',
 			},
 			backgroundImage: {

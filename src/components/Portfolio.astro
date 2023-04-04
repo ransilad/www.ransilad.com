@@ -143,16 +143,6 @@ export const PORTFOLIO_ITEMS = [{
     description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.',
     githubUrl: 'https://github.com/ransilad/tres-en-raya.ransilad.com'
 }, {
-    id: 'ransilad-portfolio',
-    isPersonal: true,
-    category: ['all', 'web'],
-    title: 'Mi Portafolio',
-    image: '/images/portfolio/ransilad-portfolio.avif',
-    url: 'https://www.ransilad.com/',
-    tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
-    description: 'Mi portafolio personal.',
-    githubUrl: 'https://github.com/ransilad/www.ransilad.com'
-}, {
     id: 'syn-ant-definition-finder',
     isPersonal: true,
     category: ['all', 'web', 'openAI'],
@@ -169,11 +159,11 @@ export const PORTFOLIO_ITEMS = [{
 <section id="portfolio" class="bg-concrete mt-20 py-14">
     <Container>
         <h2 class="text-3xl font-bold text-center">Portafolio</h2>
-        <content class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
             {PORTFOLIO_ITEMS
                 .sort((a, b) => a.title.localeCompare(b.title))
                 .map(item => (
-                    <div class="relative overflow-hidden rounded-lg bg-white shadow-md flex flex-col border border-concrete hover:border-primary">
+                    <div class="relative overflow-hidden rounded-lg bg-white shadow-md flex flex-col">
                         {item.isPersonal && <Ribbon>Personal</Ribbon>}
                         <img class="rounded-t-lg" src={item.image} width={500} height={279} alt={item.title}/>
                         <div class="p-5">
@@ -181,7 +171,7 @@ export const PORTFOLIO_ITEMS = [{
                             <p class="text-md font-light mt-4">{item.description || ''}</p>
                             <div class="flex gap-2 flex-wrap mt-6 text-[.7rem]">
                                 {item.tags.map((tag, index) => (
-                                    <span class="bg-primary rounded-full px-2 py-1 text-white">{tag}</span>
+                                    <span class="bg-primary rounded-full px-2 py-1 text-white cursor-default">{tag}</span>
                                 ))}
                             </div>
                         </div>
@@ -192,7 +182,7 @@ export const PORTFOLIO_ITEMS = [{
                                         href={item.githubUrl}
                                         target="_blank"
                                         rel="noreferrer"
-                                        class="text-sm font-semibold flex flex-row flex-nowrap gap-2"
+                                        class="text-sm font-semibold flex flex-row flex-nowrap gap-2 border-b-2 border-transparent hover:border-b-2 hover:border-primary"
                                     >
                                         Ver código <ArrowRight />
                                     </a>
@@ -204,7 +194,7 @@ export const PORTFOLIO_ITEMS = [{
                                         href={item.url}
                                         target="_blank"
                                         rel="noreferrer"
-                                        class="text-sm font-semibold flex flex-row flex-nowrap gap-2"
+                                        class="text-sm font-semibold flex flex-row flex-nowrap gap-2 border-b-2 border-transparent hover:border-b-2 hover:border-primary"
                                     >
                                         Visitar sitio <ArrowRight />
                                     </a>
@@ -214,6 +204,6 @@ export const PORTFOLIO_ITEMS = [{
                     </div>
                 ))
             }
-        </content>
+        </div>
     </Container>
 </section>

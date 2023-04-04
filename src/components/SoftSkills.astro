@@ -41,13 +41,13 @@ const SOFT_SKILLS = [{
         <TitleWithLine>
             Habilidades blandas
         </TitleWithLine>
-        <content class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             {SOFT_SKILLS.map((softSkill, index) => (
                 <div class="flex flex-col items-center justify-end rounded-lg border p-10 shadow-md hover:border-primary">
                     <img class="w-2/3" src={softSkill.image.src} alt=""/>
                     <p class="text-center mt-8">{softSkill.title}</p>
                 </div>
             ))}
-        </content>
+        </div>
     </section>
 </Container>
