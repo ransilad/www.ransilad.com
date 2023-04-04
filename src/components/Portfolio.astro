@@ -163,7 +163,7 @@ export const PORTFOLIO_ITEMS = [{
             {PORTFOLIO_ITEMS
                 .sort((a, b) => a.title.localeCompare(b.title))
                 .map(item => (
-                    <div class="relative overflow-hidden rounded-lg bg-white shadow-md flex flex-col">
+                    <div class="relative overflow-hidden rounded-lg bg-white shadow-md flex flex-col hover:scale-105 transition-all">
                         {item.isPersonal && <Ribbon>Personal</Ribbon>}
                         <img class="rounded-t-lg" src={item.image} width={500} height={279} alt={item.title}/>
                         <div class="p-5">
