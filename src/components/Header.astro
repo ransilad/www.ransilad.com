@@ -1,20 +1,24 @@
-<header class="my-5 flex items-center justify-between">
-    <a href="/#home">
-        <img src="/images/logo.svg" alt="Abel Rangel Logo" width="100">
-    </a>
-    <span id="menu" class="block md:hidden z-10">
-        <img id="open-menu" src="/icons/openMenuMobile.svg" alt="" width="40">
-        <img id="close-menu" class="hidden" src="/icons/closeMenuMobile.svg" alt="" width="40">
-    </span>
-    <nav class="absolute top-0 bottom-0 right-0 justify-center items-center left-0 hidden md:relative md:block bg-gray-900 md:bg-transparent bg-opacity-60 md:bg-opacity-0 backdrop-blur-md md:backdrop-blur-0">
-        <ul class="flex gap-6 font-semibold flex-col md:flex-row text-center md:text-start">
-            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#home">Inicio</a></li>
-            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#about">Acerca de mi</a></li>
-            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#portfolio">Portafolio</a></li>
-            <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#contact">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<div class="md:fixed w-full z-50 bg-[#f8f8f8] scroll-shadow transition-shadow ease-in-out duration-300">
+    <div class="w-10/12 lg:w-3/4 xl:w-3/5 mx-auto">
+        <header class="my-5 flex items-center justify-between">
+            <a href="/#home">
+                <img src="/images/logo.svg" alt="Abel Rangel Logo" width="100">
+            </a>
+            <span id="menu" class="block md:hidden z-10">
+                <img id="open-menu" src="/icons/openMenuMobile.svg" alt="" width="40">
+                <img id="close-menu" class="hidden" src="/icons/closeMenuMobile.svg" alt="" width="40">
+            </span>
+            <nav class="absolute top-0 bottom-0 right-0 justify-center items-center left-0 hidden md:relative md:block bg-gray-900 md:bg-transparent bg-opacity-60 md:bg-opacity-0 backdrop-blur-md md:backdrop-blur-0">
+                <ul class="flex gap-6 font-semibold flex-col md:flex-row text-center md:text-start">
+                    <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#home">Inicio</a></li>
+                    <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#about">Acerca de mi</a></li>
+                    <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#portfolio">Portafolio</a></li>
+                    <li class="border-b-2 border-transparent hover:border-primary text-white md:text-inherit text-2xl md:text-base"><a href="/#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</div>
 
 <script>
     // Función para validar el tamaño de la pantalla y mostrar el menú
@@ -55,4 +59,14 @@
             }
         })
     })
+
+    window.addEventListener("scroll", function() {
+        const element = document.querySelector(".scroll-shadow");
+        const scrollY = window.scrollY;
+        if (scrollY > 200) {
+            element.classList.add("shadow-md");
+        } else {
+            element.classList.remove("shadow-md");
+        }
+    });
 </script>
