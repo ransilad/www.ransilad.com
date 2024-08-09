@@ -1,45 +1,54 @@
 ---
-import Container from "./utils/Container.astro"
+import Container from './utils/Container.astro'
 
-const TESTIMONIALS = [{
-  name: 'Roger Robinson',
-  position: 'Product Manager',
-  testimonial: 'Dentro de nuestro equipo de desarrolladores, Abel siempre era el más confiable. Al dar una tarea o proyecto a Abel, él primero planificaba bien, haciendo las investigaciones necesarias. Luego lo completaba con agilidad, entregando un producto que en su primer borrador ya estaba casi listo para lanzar. Abel casi nunca cometía errores, por su diligente ética de estudiar bien los problemas antes de saltar a una solución. Abel posee una creatividad para solucionar problemas que nunca dejó de asombrarnos, a la vez haciendo más fácil mi vida como su jefe. Cuando surgía una tarea o proyecto especialmente importante para la empresa, entre los gerentes decíamos: “démosla a Abel.”',
-  image: '/images/testimonials/roger.webp'
-}, {
-  name: 'Víctor Navarro',
-  position: 'Senior Software Engineer Backend',
-  testimonial: 'Abel es una persona muy esforzada, que se enfoca en la resolución de objetivos tanto en los proyectos que participamos como personales. Se capacita constantemente y tiene ganas de aprender todos los días. Es una persona entusiasta, muy agradable y que demuestra mucho compromiso con su equipo. Fue un agrado haber compartido con Abel mientras estuve en Cocha, es un ingeniero y un hombre de calidad, tanto técnica como humana.',
-  image: '/images/testimonials/victor.webp'
-}, {
-  name: 'Angel Rivera',
-  position: 'Senior Software Engineer Backend',
-  testimonial: 'Gran colaborador en el equipo de desarrollo, tanto profesionalmente y como persona. Cuenta con una gran capacidad de aprendizaje y adaptación, muy buen trabajo en equipo y análisis para resolución de problemas.',
-  image: '/images/testimonials/angel.webp'
-}]
+const TESTIMONIALS = [
+  {
+    name: 'Roger Robinson',
+    position: 'Product Manager',
+    testimonial:
+      'Dentro de nuestro equipo de desarrolladores, Abel siempre era el más confiable. Al dar una tarea o proyecto a Abel, él primero planificaba bien, haciendo las investigaciones necesarias. Luego lo completaba con agilidad, entregando un producto que en su primer borrador ya estaba casi listo para lanzar. Abel casi nunca cometía errores, por su diligente ética de estudiar bien los problemas antes de saltar a una solución. Abel posee una creatividad para solucionar problemas que nunca dejó de asombrarnos, a la vez haciendo más fácil mi vida como su jefe. Cuando surgía una tarea o proyecto especialmente importante para la empresa, entre los gerentes decíamos: “démosla a Abel.”',
+    image: '/images/testimonials/roger.webp'
+  },
+  {
+    name: 'Víctor Navarro',
+    position: 'Senior Software Engineer Backend',
+    testimonial:
+      'Abel es una persona muy esforzada, que se enfoca en la resolución de objetivos tanto en los proyectos que participamos como personales. Se capacita constantemente y tiene ganas de aprender todos los días. Es una persona entusiasta, muy agradable y que demuestra mucho compromiso con su equipo. Fue un agrado haber compartido con Abel mientras estuve en Cocha, es un ingeniero y un hombre de calidad, tanto técnica como humana.',
+    image: '/images/testimonials/victor.webp'
+  },
+  {
+    name: 'Angel Rivera',
+    position: 'Senior Software Engineer Backend',
+    testimonial:
+      'Gran colaborador en el equipo de desarrollo, tanto profesionalmente y como persona. Cuenta con una gran capacidad de aprendizaje y adaptación, muy buen trabajo en equipo y análisis para resolución de problemas.',
+    image: '/images/testimonials/angel.webp'
+  }
+]
 ---
 
 <Container>
-    <section class="text-center my-16">
-        <h3 class="text-md font-semibold text-primary">Testimonios</h3>
-        <h4 class="text-3xl font-bold">Lo que dicen mis compañeros</h4>
-        <a
-            href="https://www.linkedin.com/in/ransilad/details/recommendations/"
-            target="_blank"
-            rel="noreferrer"
-            class="italic text-sm text-gray-500 hover:text-gray-700"
-        >Ver en LinkedIn</a>
-        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((testimonial, index) => (
-                <div class="rounded-lg bg-white shadow-md py-10 px-8">
-                    <div class="flex justify-center mb-10">
-                        <img class="w-1/2 rounded-full border-2" src={testimonial.image} alt={testimonial.name} />
-                    </div>
-                    <p class="text-sm">{testimonial.testimonial}</p>
-                    <p class="text-primary font-semibold mt-8">{testimonial.name}</p>
-                    <p class="text-sm font-semibold">{testimonial.position}</p>
-                </div>
-            ))}
-        </div>
-    </section>
+  <section class='text-center my-16'>
+    <h3 class='text-md font-semibold text-primary'>Testimonios</h3>
+    <h4 class='text-3xl font-bold'>Lo que dicen mis compañeros</h4>
+    <a
+      href='https://www.linkedin.com/in/ransilad/details/recommendations/'
+      target='_blank'
+      rel='noreferrer'
+      class='italic text-sm text-gray-500 hover:text-gray-700'>Ver en LinkedIn</a
+    >
+    <div class='mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      {
+        TESTIMONIALS.map((testimonial, index) => (
+          <div class='rounded-lg bg-white shadow-md py-10 px-8'>
+            <div class='flex justify-center mb-10'>
+              <img class='w-1/2 rounded-full border-2' src={testimonial.image} alt={testimonial.name} />
+            </div>
+            <p class='text-sm'>{testimonial.testimonial}</p>
+            <p class='text-primary font-semibold mt-8'>{testimonial.name}</p>
+            <p class='text-sm font-semibold'>{testimonial.position}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 </Container>

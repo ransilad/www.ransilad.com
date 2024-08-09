@@ -1,64 +1,59 @@
 ---
-import SpeedInsights from "@vercel/speed-insights/astro";
-import AboutMe from '@components/AboutMe.astro';
-import ContactMe from '@components/ContactMe.astro';
-import ContactMeBanner from '@components/ContactMeBanner.astro';
-import ContactMeSimple from '@components/ContactMeSimple.astro';
-import Footer from '@components/Footer.astro';
-import HardSkills from '@components/HardSkills.astro';
-import Landing from '@components/Landing.astro';
-import Portfolio from '@components/Portfolio.astro';
-import SoftSkills from '@components/SoftSkills.astro';
-import Testimonials from '@components/Testimonials.astro';
-import Header from '@components/Header.astro';
+import SpeedInsights from '@vercel/speed-insights/astro'
+import AboutMe from '@components/AboutMe.astro'
+import ContactMe from '@components/ContactMe.astro'
+import ContactMeBanner from '@components/ContactMeBanner.astro'
+import ContactMeSimple from '@components/ContactMeSimple.astro'
+import Footer from '@components/Footer.astro'
+import HardSkills from '@components/HardSkills.astro'
+import Landing from '@components/Landing.astro'
+import Portfolio from '@components/Portfolio.astro'
+import SoftSkills from '@components/SoftSkills.astro'
+import Testimonials from '@components/Testimonials.astro'
+import Header from '@components/Header.astro'
 
 import './_index.css'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="generator" content={Astro.generator} />
-        <title>Abel Rangel</title>
-        <meta
-          name="description"
-          content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="google" content="nositelinkssearchbox"/>
-        <meta name="google" content="notranslate"/>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Abel Rangel</title>
+    <meta name='description' content='Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='google' content='nositelinkssearchbox' />
+    <meta name='google' content='notranslate' />
 
-        <link rel="icon" href="/favicon.png"/>
+    <link rel='icon' href='/favicon.png' />
 
-        {/* Facebook Meta Tags */}
-        <meta property="og:url" content="https://www.ransilad.com/"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Abel Rangel"/>
-        <meta property="og:description"
-              content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"/>
-        <meta property="og:image" content="https://www.ransilad.com/cover.webp"/>
+    {/* Facebook Meta Tags */}
+    <meta property='og:url' content='https://www.ransilad.com/' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content='Abel Rangel' />
+    <meta property='og:description' content='Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible' />
+    <meta property='og:image' content='https://www.ransilad.com/cover.webp' />
 
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:domain" content="ransilad.com"/>
-        <meta name="twitter:url" content="https://www.ransilad.com/"/>
-        <meta name="twitter:title" content="Abel Rangel"/>
-        <meta name="twitter:description"
-              content="Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible"/>
-        <meta name="twitter:image" content="https://www.ransilad.com/cover.webp"/>
-	</head>
-	<body>
-            <Header />
-		<Landing />
-		<AboutMe />
-		<SoftSkills />
-		<HardSkills />
-		<Portfolio />
-		<ContactMeSimple />
-		<Testimonials />
-		<ContactMeBanner />
-		<ContactMe />
-		<Footer />
-            <SpeedInsights />
-	</body>
+    {/* Twitter Meta Tags */}
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:domain' content='ransilad.com' />
+    <meta name='twitter:url' content='https://www.ransilad.com/' />
+    <meta name='twitter:title' content='Abel Rangel' />
+    <meta name='twitter:description' content='Ingeniero que trabaja arduamente, con un don para crear soluciones elegantes en el menor tiempo posible' />
+    <meta name='twitter:image' content='https://www.ransilad.com/cover.webp' />
+  </head>
+  <body>
+    <Header />
+    <Landing />
+    <AboutMe />
+    <SoftSkills />
+    <HardSkills />
+    <Portfolio />
+    <ContactMeSimple />
+    <Testimonials />
+    <ContactMeBanner />
+    <ContactMe />
+    <Footer />
+    <SpeedInsights />
+  </body>
 </html>
