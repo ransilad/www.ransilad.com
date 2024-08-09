@@ -9,7 +9,7 @@
         <img id='close-menu' class='hidden' src='/icons/closeMenuMobile.svg' alt='' width='40' />
       </span>
       <nav
-        class='absolute top-0 bottom-0 right-0 justify-center items-center left-0 hidden md:relative md:block bg-zinc-900 md:bg-transparent bg-opacity-80 md:bg-opacity-0 backdrop-blur-md md:backdrop-blur-0'
+        class='absolute inset-0 right-0 justify-center items-center flex md:relative md:block bg-zinc-950 md:bg-transparent bg-opacity-80 md:bg-opacity-0 backdrop-blur-md md:backdrop-blur-0 transition-all ease-in-out duration-300'
       >
         <ul class='flex gap-6 font-semibold flex-col md:flex-row text-center md:text-start'>
           <li class='border-b-2 border-transparent hover:border-primary text-white md:text-zinc-500 hover:text-zinc-300 text-2xl md:text-base'>
@@ -34,13 +34,10 @@
   // Función para validar el tamaño de la pantalla y mostrar el menú
   function validateMenu() {
     if (window.innerWidth < 640) {
-      if (document.body.style.overflowY !== 'hidden') {
-        document.querySelector('nav').classList.add('hidden')
-      } else {
-        document.querySelector('nav').classList.add('flex')
-      }
+      const isHidden = document.body.style.overflowY !== 'hidden'
+      document.querySelector('nav').classList.toggle('show-menu', !isHidden)
     } else {
-      document.querySelector('nav').classList.remove('flex')
+      document.querySelector('nav').classList.add('show-menu')
       document.body.style.overflowY = 'auto'
     }
   }
@@ -49,10 +46,9 @@
 
   // Función para mostrar/ocultar el menú en dispositivos móviles cuando se le da click al botón
   document.querySelector('#menu').addEventListener('click', () => {
-    document.querySelector('nav').classList.toggle('hidden')
-    document.querySelector('nav').classList.toggle('flex')
     document.querySelector('#open-menu').classList.toggle('hidden')
     document.querySelector('#close-menu').classList.toggle('hidden')
+    document.querySelector('nav').classList.toggle('show-menu')
     document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden'
   })
 
@@ -61,8 +57,7 @@
   $navbar.querySelectorAll('a').forEach((anchor) => {
     anchor.addEventListener('click', (_event) => {
       if (window.innerWidth < 640) {
-        document.querySelector('nav').classList.toggle('hidden')
-        document.querySelector('nav').classList.toggle('flex')
+        document.querySelector('nav').classList.toggle('show-menu')
         document.querySelector('#open-menu').classList.toggle('hidden')
         document.querySelector('#close-menu').classList.toggle('hidden')
         document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden'
@@ -80,3 +75,13 @@
     }
   })
 </script>
+
+<style>
+  nav {
+    transform: translateY(-100%);
+
+    &.show-menu {
+      transform: translateY(0);
+    }
+  }
+</style>
