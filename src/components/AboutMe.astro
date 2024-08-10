@@ -1,21 +1,33 @@
 ---
 import Container from './utils/Container.astro'
+import Graduation from '@icons/Graduation.astro'
+
+const SOFT_SKILLS = [
+  'Actitud positiva',
+  'Trabajo en equipo y liderazgo',
+  'Comunicación efectiva',
+  'Gestión del tiempo',
+  'Adaptación y tolerancia',
+  'Aprendizaje continuo'
+]
 ---
 
 <Container>
-  <section id='about' class='pt-20 md:pt-32'>
-    <div class='flex flex-col md:flex-row'>
+  <section id='about' class='py-6 md:py-16'>
+    <!-- <div class='flex flex-col md:flex-row'>
       <div class='mb-14 md:mb-0 flex justify-center md:justify-start'>
         <img src='/images/developer.svg' alt='Persona programando' class='w-2/3' />
       </div>
       <div class='flex flex-col'>
         <p class='text-3xl font-bold mb-8'>Acerca de mi</p>
-        <p class='mb-4'>
-          Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo. Me adapto a cualquier proyecto y reto
-          que me propongan.
-        </p>
-        <p class='mb-4'>Me esfuerzo mucho para crear soluciones elegantes en el menor tiempo posible.</p>
-        <p class='mb-10'>Soy de la idea que el conocimiento es para compartirlo, por lo que me gusta enseñar y aprender de los demás.</p>
+        <div class='text-pretty text-zinc-400 text-lg font-light'>
+          <p class='mb-4'>
+            Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo. Me adapto a cualquier proyecto y reto
+            que me propongan.
+          </p>
+          <p class='mb-4'>Me esfuerzo mucho para crear soluciones elegantes en el menor tiempo posible.</p>
+          <p class='mb-10'>Soy de la idea que el conocimiento es para compartirlo, por lo que me gusta enseñar y aprender de los demás.</p>
+        </div>
         <a
           class='bg-primary hover:bg-transparent transition-all text-white hover:text-primary border border-transparent hover:border-primary font-bold py-3 px-6 rounded-full w-fit'
           href='https://drive.google.com/file/d/1Q3vHdCzExbZzoXyZ0RRChbyNi9R1pm40/view?usp=sharing'
@@ -25,6 +37,60 @@ import Container from './utils/Container.astro'
           Descargar CV
         </a>
       </div>
+    </div> -->
+    <div class='grid grid-cols-10 gap-6 *:overflow-clip *:rounded-xl *:border *:border-zinc-800 *:p-6'>
+      <article class='relative col-span-10 md:col-span-4'>
+        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+          <img src='/icons/about-me/work.webp' alt='Work' class='h-8' />
+          Acerca de mi
+        </h2>
+        <div class='text-pretty text-zinc-400 text-lg font-light flex flex-col gap-4'>
+          <p>
+            Entusiasta de la tecnología, empático, <strong class='text-primary'>responsable</strong>, con capacidad de escucha, compromiso y trabajo en equipo.
+            Me adapto a cualquier proyecto y reto que me propongan.
+          </p>
+          <p>Me esfuerzo mucho para crear <strong class='text-white'>soluciones elegantes</strong> en el menor tiempo posible.</p>
+          <p>Soy de la idea que el conocimiento es para compartirlo, por lo que me gusta enseñar y aprender de los demás.</p>
+        </div>
+      </article>
+      <article class='flex flex-col col-span-10 md:col-span-6'>
+        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+          <img src='/icons/about-me/soft-skills.webp' alt='Soft Skills' class='h-8' />
+          Habilidades blandas
+        </h2>
+        <div class='text-pretty text-zinc-400 text-lg font-light flex flex-col gap-4 mb-6'>
+          <p>
+            En un mundo laboral en constante evolución, las habilidades técnicas son esenciales, pero las habilidades blandas son las que realmente marcan la
+            diferencia.
+          </p>
+          <p>Estas competencias interpersonales y emocionales son fundamentales para trabajar en equipo, liderar proyectos y adaptarse a los cambios.</p>
+        </div>
+        <div class='flex flex-row flex-wrap gap-2 mt-auto'>
+          {SOFT_SKILLS.map((softSkill) => <article class='text-sm px-3 py-2 border border-zinc-800 rounded-full bg-zinc-900'>{softSkill}</article>)}
+        </div>
+      </article>
+      <article class='relative col-span-10 md:col-span-6'>
+        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+          <img src='/icons/about-me/diploma.webp' alt='Diploma' class='h-8' />
+          Educación
+        </h2>
+        <div class='text-pretty text-zinc-400 text-lg font-light flex flex-col gap-4'>
+          <p class='text-primary font-bold'>Ingeniería en Informática</p>
+          <p class='-mt-4 text-zinc-500'>Táchira, Venezuela | 2014</p>
+          <p>
+            Graduado de la <span class='text-white'>Universidad Nacional Experimental del Táchira</span>, donde adquirí conocimientos sólidos en programación,
+            arquitectura de sistemas y bases de datos. Adicionalmente, participé en el desarrollo de la página de PostGrado y en la creación de un sistema para
+            el soporte técnico de la universidad.
+          </p>
+        </div>
+      </article>
+      <article class='relative col-span-10 md:col-span-4'>
+        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+          <img src='/icons/about-me/home.webp' alt='Home' class='h-8' />
+          Dónde estoy
+        </h2>
+        <div class='text-pretty text-zinc-400 text-2xl'>Santiago, <strong class='text-primary'>Chile</strong></div>
+      </article>
     </div>
   </section>
 </Container>

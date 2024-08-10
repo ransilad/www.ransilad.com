@@ -12,7 +12,8 @@ module.exports = {
       colors: {
         concrete: '#F3F3F3',
         primary: '#00ca5b',
-        emperor: '#515151'
+        emperor: '#515151',
+        background: '#0c0a09'
       },
       backgroundImage: {
         'contact-me-banner': "url('/images/contact-me-banner.webp')"
