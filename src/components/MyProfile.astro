@@ -1,9 +1,5 @@
 ---
-import Github from '@icons/Github.astro'
-import LinkedIn from '@icons/LinkedIn.astro'
-import Mail from '@icons/Mail.astro'
-import Phone from '@icons/Phone.astro'
-import Twitter from '@icons/Twitter.astro'
+import SocialNetworks from './SocialNetworks.astro'
 ---
 
 <section class='flex flex-col md:flex-row my-auto items-center'>
@@ -11,20 +7,7 @@ import Twitter from '@icons/Twitter.astro'
     <div class='bg-primary w-fit px-4 py-2 rounded-t-full rounded-r-full text-zinc-950 font-bold'>Hola, soy</div>
     <h1 class='text-4xl md:text-6xl font-extrabold mt-5'>Abel Rangel</h1>
     <h2 class='text-xl md:text-2xl font-light text-zinc-400'>Desarrollador Fullstack</h2>
-    <div class='mt-6 flex gap-4'>
-      <a href='https://www.linkedin.com/in/ransilad' target='_blank' rel='noreferrer' aria-label='LinkedIn'>
-        <LinkedIn />
-      </a>
-      <a href='https://github.com/ransilad' target='_blank' rel='noreferrer' aria-label='Github'>
-        <Github />
-      </a>
-      <a href='https://twitter.com/ransilad' target='_blank' rel='noreferrer' aria-label='Twitter'>
-        <Twitter />
-      </a>
-      <a href='mailto:abeld.rangels@gmail.com' target='_blank' rel='noreferrer'>
-        <Mail />
-      </a>
-    </div>
+    <SocialNetworks />
   </div>
   <div class='w-4/5 sm:w-80 lg:w-96 mx-auto order-1 md:order-2 mb-16 mt-32 md:mb-0 md:mt-0'>
     <img
