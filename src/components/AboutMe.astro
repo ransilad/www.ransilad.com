@@ -1,6 +1,7 @@
 ---
 import Container from './utils/Container.astro'
 import Graduation from '@icons/Graduation.astro'
+import TitleWithLine from './utils/TitleWithLine.astro'
 
 const SOFT_SKILLS = [
   'Actitud positiva',
@@ -20,7 +21,7 @@ const SOFT_SKILLS = [
       </div>
       <div class='flex flex-col'>
         <p class='text-3xl font-bold mb-8'>Acerca de mi</p>
-        <div class='text-pretty text-zinc-400 text-lg font-light'>
+        <div class='text-pretty text-zinc-400 md:text-lg font-light'>
           <p class='mb-4'>
             Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo. Me adapto a cualquier proyecto y reto
             que me propongan.
@@ -38,27 +39,28 @@ const SOFT_SKILLS = [
         </a>
       </div>
     </div> -->
+    <TitleWithLine>Acerca de mi</TitleWithLine>
     <div class='grid grid-cols-10 gap-6 *:overflow-clip *:rounded-xl *:border *:border-zinc-800 *:p-6'>
       <article class='relative col-span-10 md:col-span-4'>
-        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+        <h2 class='text-xl md:text-2xl font-semibold mb-6 flex flex-row gap-4'>
           <img src='/icons/about-me/work.webp' alt='Work' class='h-8' />
-          Acerca de mi
+          En el trabajo
         </h2>
-        <div class='text-pretty text-zinc-400 text-lg font-light flex flex-col gap-4'>
+        <div class='text-pretty text-zinc-400 md:text-lg font-light flex flex-col gap-4'>
           <p>
             Entusiasta de la tecnología, empático, <strong class='text-primary'>responsable</strong>, con capacidad de escucha, compromiso y trabajo en equipo.
             Me adapto a cualquier proyecto y reto que me propongan.
           </p>
-          <p>Me esfuerzo mucho para crear <strong class='text-white'>soluciones elegantes</strong> en el menor tiempo posible.</p>
+          <p>Me esfuerzo mucho para crear <strong class='text-primary'>soluciones elegantes</strong> en el menor tiempo posible.</p>
           <p>Soy de la idea que el conocimiento es para compartirlo, por lo que me gusta enseñar y aprender de los demás.</p>
         </div>
       </article>
       <article class='flex flex-col col-span-10 md:col-span-6'>
-        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+        <h2 class='text-xl md:text-2xl font-semibold mb-6 flex flex-row gap-4'>
           <img src='/icons/about-me/soft-skills.webp' alt='Soft Skills' class='h-8' />
           Habilidades blandas
         </h2>
-        <div class='text-pretty text-zinc-400 text-lg font-light flex flex-col gap-4 mb-6'>
+        <div class='text-pretty text-zinc-400 md:text-lg font-light flex flex-col gap-4 mb-6'>
           <p>
             En un mundo laboral en constante evolución, las habilidades técnicas son esenciales, pero las habilidades blandas son las que realmente marcan la
             diferencia.
@@ -70,11 +72,11 @@ const SOFT_SKILLS = [
         </div>
       </article>
       <article class='relative col-span-10 md:col-span-6'>
-        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
+        <h2 class='text-xl md:text-2xl font-semibold mb-6 flex flex-row gap-4'>
           <img src='/icons/about-me/diploma.webp' alt='Diploma' class='h-8' />
           Educación
         </h2>
-        <div class='text-pretty text-zinc-400 text-lg font-light flex flex-col gap-4'>
+        <div class='text-pretty text-zinc-400 md:text-lg font-light flex flex-col gap-4'>
           <p class='text-primary font-bold'>Ingeniería en Informática</p>
           <p class='-mt-4 text-zinc-500'>Táchira, Venezuela | 2014</p>
           <p>
@@ -84,12 +86,49 @@ const SOFT_SKILLS = [
           </p>
         </div>
       </article>
-      <article class='relative col-span-10 md:col-span-4'>
-        <h2 class='text-2xl font-semibold mb-6 flex flex-row gap-4'>
-          <img src='/icons/about-me/home.webp' alt='Home' class='h-8' />
-          Dónde estoy
+      <article class='relative col-span-10 md:col-span-4 flex flex-col'>
+        <h2 class='text-xl md:text-2xl font-semibold mb-6 flex flex-row gap-4'>
+          <img src='/icons/about-me/love.webp' alt='Home' class='h-8' />
+          Gustos y pasatiempos
         </h2>
-        <div class='text-pretty text-zinc-400 text-2xl'>Santiago, <strong class='text-primary'>Chile</strong></div>
+        <div class='grid grid-cols-3 grid-rows-1 gap-x-8 pt-8 sm:gap-x-2 flex-1'>
+          <div class='relative flex -rotate-12 animate-float flex-col items-center -space-y-0 self-start justify-self-center'>
+            <picture>
+              <img src='/icons/food.webp' alt='Emoji de una brocheta' class='size-[60px] md:size-[80px]' loading='lazy' decoding='async' />
+            </picture>
+            <p class='inset-x-0 -z-10 mt-2 min-h-fit min-w-max rounded-full border bg-[#1d1b1b] px-[1em] py-[0.2em] text-center text-2xs md:text-xs'>
+              <span class='my-1 inline-flex items-center gap-x-2'>
+                ❤️
+                <span class='sr-only'>Amor</span>
+                <span class='font-medium'> Brocheta </span>
+              </span>
+            </p>
+          </div>
+          <div class='relative flex animate-bounce flex-col items-center -space-y-0 self-end justify-self-center'>
+            <picture>
+              <img src='/icons/soccer.webp' alt='Emoji de una pelota' class='size-[50px] md:size-[70px]' loading='lazy' decoding='async' />
+            </picture>
+            <p class='inset-x-0 -z-10 mt-2 min-h-fit min-w-max rounded-full border bg-[#1d1b1b] px-[1em] py-[0.2em] text-center text-2xs md:text-xs'>
+              <span class='my-1 inline-flex items-center gap-x-2'>
+                ❤️
+                <span class='sr-only'>Amor</span>
+                <span class='font-medium'> Fútbol </span>
+              </span>
+            </p>
+          </div>
+          <div class='relative flex rotate-12 animate-float animate-delay-700 flex-col items-center -space-y-0 self-start justify-self-center'>
+            <picture>
+              <img src='/icons/cinema.webp' alt='Emoji de un cine' class='size-[60px] md:size-[80px]' loading='lazy' decoding='async' />
+            </picture>
+            <p class='inset-x-0 -z-10 mt-2 min-h-fit min-w-max rounded-full border bg-[#1d1b1b] px-[1em] py-[0.2em] text-center text-2xs md:text-xs'>
+              <span class='my-1 inline-flex items-center gap-x-2'>
+                ❤️
+                <span class='sr-only'>Amor</span>
+                <span class='font-medium'> Cine </span>
+              </span>
+            </p>
+          </div>
+        </div>
       </article>
     </div>
   </section>

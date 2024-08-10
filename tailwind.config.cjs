@@ -9,6 +9,9 @@ module.exports = {
       xl: '1600px'
     },
     extend: {
+      fontSize: {
+        '2xs': '0.625rem'
+      },
       colors: {
         concrete: '#F3F3F3',
         primary: '#00ca5b',
@@ -17,6 +20,16 @@ module.exports = {
       },
       backgroundImage: {
         'contact-me-banner': "url('/images/contact-me-banner.webp')"
+      },
+      keyframes: {
+        float: {
+          '0%': { translate: '0 0' },
+          '50%': { translate: '0 -15px' },
+          '100%': { translate: '0 0' }
+        }
+      },
+      animation: {
+        float: 'float 3s ease-in-out infinite alternate'
       }
     }
   },
