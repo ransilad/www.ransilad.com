@@ -3,8 +3,10 @@ import Container from './utils/Container.astro'
 ---
 
 <Container>
-  <footer class='font-light text-sm flex flex-col md:flex-row md:justify-between my-6 text-center'>
-    <p>Abel Rangel @ {new Date().getFullYear()}</p>
-    <p>Hecho con Astro</p>
+  <footer
+    class='font-extralight md:text-lg flex flex-col gap-1 md:gap-0 md:flex-row md:justify-between my-4 md:my-7 text-center border-t border-zinc-900 pt-4 md:pt-7'
+  >
+    <p>Abel Rangel <span class='text-primary'>@ {new Date().getFullYear()}</span></p>
+    <p>Hecho con <a href='https://astro.build' target='_blank' rel='noreferrer' class='text-white hover:text-primary font-bold'>Astro</a></p>
   </footer>
 </Container>

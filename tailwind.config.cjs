@@ -30,6 +30,9 @@ module.exports = {
       },
       animation: {
         float: 'float 3s ease-in-out infinite alternate'
+      },
+      boxShadow: {
+        '3xl-center': '0 0px 104px -40px'
       }
     }
   },
