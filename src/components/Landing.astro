@@ -16,7 +16,7 @@ import Container from './utils/Container.astro'
 <script>
   const options = {
     rootMargin: '0px',
-    threshold: 1
+    threshold: window.innerWidth < 640 ? 0.3 : 0.8
   }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
