@@ -1,6 +1,6 @@
 ---
 import Mail from '@icons/Mail.astro'
-import SocialNetworks from './SocialNetworks.astro'
+import SocialNetworks from './SocialNetworks.jsx'
 import Container from './utils/Container.astro'
 import TitleWithLine from './utils/TitleWithLine.astro'
 ---
@@ -14,7 +14,7 @@ import TitleWithLine from './utils/TitleWithLine.astro'
         <p class='text-pretty text-zinc-400 md:text-lg font-lightmd:w-2/3 text-center md:text-left'>
           Espero que este portfolio, hecho con mucho cariño, haya sido de su agrado.
         </p>
-        <SocialNetworks />
+        <SocialNetworks client:load />
       </article>
       <div class='md:hidden border-b border-zinc-900 w-full my-6'></div>
       <article>
