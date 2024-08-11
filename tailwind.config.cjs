@@ -18,9 +18,6 @@ module.exports = {
         emperor: '#515151',
         background: '#0c0a09'
       },
-      backgroundImage: {
-        'contact-me-banner': "url('/images/contact-me-banner.webp')"
-      },
       keyframes: {
         float: {
           '0%': { translate: '0 0' },

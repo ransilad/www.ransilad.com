@@ -1,0 +1,253 @@
+---
+import Container from './utils/Container.astro'
+import TitleWithLine from './utils/TitleWithLine.astro'
+
+const WORK_KUBOS_ITEMS = [
+  {
+    title: 'Angular',
+    imagen: '/icons/angular.svg'
+  },
+  {
+    title: 'React Native',
+    imagen: '/icons/react-native.svg'
+  },
+  {
+    title: 'Git',
+    imagen: '/icons/git.svg'
+  },
+  {
+    title: 'Jenkins',
+    imagen: '/icons/jenkins.svg'
+  },
+  {
+    title: 'Docker',
+    imagen: '/icons/docker.svg'
+  },
+  {
+    title: 'Kubernetes',
+    imagen: '/icons/kubernetes.svg'
+  },
+  {
+    title: 'Terraform',
+    imagen: '/icons/terraform.svg'
+  },
+  {
+    title: 'Python',
+    imagen: '/icons/python.svg'
+  }
+]
+
+const WORK_ONA_ITEMS = [
+  {
+    title: 'Freelance',
+    imagen: '/icons/freelance.svg'
+  },
+  {
+    title: 'React',
+    imagen: '/icons/react-native.svg'
+  },
+  {
+    title: 'React Native',
+    imagen: '/icons/react-native.svg'
+  },
+  {
+    title: 'Git',
+    imagen: '/icons/git.svg'
+  },
+  {
+    title: 'Astro',
+    imagen: '/icons/astro.svg'
+  },
+  {
+    title: 'TailwindCSS',
+    imagen: '/icons/tailwind.svg'
+  },
+  {
+    title: 'Github Actions',
+    imagen: '/icons/github.svg'
+  }
+]
+
+const WORK_DTEMITE_ITEMS = [
+  {
+    title: 'Freelance',
+    imagen: '/icons/freelance.svg'
+  },
+  {
+    title: 'React',
+    imagen: '/icons/react-native.svg'
+  },
+  {
+    title: 'React Native',
+    imagen: '/icons/react-native.svg'
+  },
+  {
+    title: 'Astro',
+    imagen: '/icons/astro.svg'
+  },
+  {
+    title: 'NextJS',
+    imagen: '/icons/nextjs.svg'
+  },
+  {
+    title: 'TailwindCSS',
+    imagen: '/icons/tailwind.svg'
+  },
+  {
+    title: 'Python',
+    imagen: '/icons/python.svg'
+  },
+  {
+    title: 'Git',
+    imagen: '/icons/git.svg'
+  },
+  {
+    title: 'Github Actions',
+    imagen: '/icons/github.svg'
+  }
+]
+---
+
+<Container>
+  <section id='works' class='py-6 md:py-10'>
+    <TitleWithLine>Experiencia laboral</TitleWithLine>
+    <div class='flex flex-col'>
+      <article>
+        <div class='absolute top-4 -left-[41px] size-4 bg-primary rounded-full'></div>
+        <div>
+          <h2 class='md:text-lg'>
+            <a href='https://www.kubos.cl/' target='_blank' rel='noreferrer' class='text-primary font-bold flex flex-row gap-2 items-center'>
+              Desarrollador Fullstack - Kubos
+              <img src='/icons/external-link.svg' class='h-4' alt='' />
+            </a>
+          </h2>
+          <p class='text-sm text-zinc-300'>Santiago, Chile <span class='text-zinc-500 px-1'>|</span> Abril 2022 - Actualidad</p>
+          <div class='text-pretty text-zinc-400 md:text-lg font-light mt-6 flex flex-col gap-4'>
+            <p>
+              A lo largo de más de 4 años de experiencia he creado y optimizado <span class='text-white'>soluciones tecnológicas</span> para el sector financiero
+              y otros rubros. Especializado en el desarrollo de <span class='text-white'>algoritmos de trading automatizados</span>, aplicaciones web
+              interactivas y mejoras en sistemas existentes.
+            </p>
+            <p>
+              He liderado proyectos clave en empresas como <strong class='text-primary'>BCI</strong> y <strong class='text-primary'>Banco de Chile</strong>,
+              garantizando un rendimiento optimizado y una experiencia de usuario superior. Mi enfoque se centra en la innovación continua, el análisis
+              detallado y la entrega de resultados <span class='text-white'>medibles</span>.
+            </p>
+          </div>
+          <div class='flex flex-row flex-wrap gap-2 mt-6'>
+            {
+              WORK_KUBOS_ITEMS.map((item) => (
+                <div class='text-sm px-2 py-1 border border-zinc-800 rounded-full bg-zinc-900 flex flex-row gap-2 justify-center items-center'>
+                  <img src={item.imagen} alt={item.title} class='size-4' />
+                  {item.title}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class='absolute top-4 -left-[41px] size-4 bg-primary rounded-full'></div>
+        <div>
+          <h2 class='md:text-lg'>
+            <a href='https://www.onastrategy.com/' target='_blank' rel='noreferrer' class='text-primary font-bold flex flex-row gap-2 items-center'>
+              React Developer - ONA
+              <img src='/icons/external-link.svg' class='h-4' alt='' />
+            </a>
+          </h2>
+          <p class='text-sm text-zinc-300'>Austin, EEUU <span class='text-zinc-500 px-1'>|</span> Abril 2021 - Actualidad</p>
+          <div class='text-pretty text-zinc-400 md:text-lg font-light mt-6 flex flex-col gap-4'>
+            <p>
+              He tenido el privilegio de desarrollar soluciones tecnológicas innovadoras para empresas como <strong class='text-primary'>Inlet</strong>, <strong
+                class='text-primary'>IDC</strong
+              > y <strong class='text-primary'>Tendy</strong>, creando sistemas que facilitan la interacción comunitaria, la gestión de contenido educativo y
+              mejoras en aplicaciones móviles y web.
+            </p>
+            <p>
+              Mi trabajo se enfoca en <span class='text-white'>optimizar</span> la experiencia del usuario y garantizar la <span class='text-white'
+                >calidad</span
+              > en cada proyecto.
+            </p>
+          </div>
+          <div class='flex flex-row flex-wrap gap-2 mt-6'>
+            {
+              WORK_ONA_ITEMS.map((item) => (
+                <div class='text-sm px-2 py-1 border border-zinc-800 rounded-full bg-zinc-900 flex flex-row gap-2 justify-center items-center'>
+                  <img src={item.imagen} alt={item.title} class='size-4' />
+                  {item.title}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class='absolute top-4 -left-[41px] size-4 bg-primary rounded-full'></div>
+        <div>
+          <h2 class='md:text-lg'>
+            <a href='https://dtemite.cl/' target='_blank' rel='noreferrer' class='text-primary font-bold flex flex-row gap-2 items-center'>
+              Fullstack Developer - Dtemite Ltda
+              <img src='/icons/external-link.svg' class='h-4' alt='' />
+            </a>
+          </h2>
+          <p class='text-sm text-zinc-300'>Santiago, Chile <span class='text-zinc-500 px-1'>|</span> Febrero 2021 - Actualidad</p>
+          <div class='text-pretty text-zinc-400 md:text-lg font-light mt-6 flex flex-col gap-4'>
+            <p>
+              He contribuido al desarrollo de sistemas avanzados para <strong class='text-primary'>Dtemite</strong>, <strong class='text-primary'
+                >Americar</strong
+              >, <strong class='text-primary'>esemed</strong>, y <strong class='text-primary'>Dpay</strong>. En Dtemite, creé APIs en Python Flask que
+              automatizan procesos y mejoran las transacciones con el SII, integrando también sistemas de pago como Transbank. Configuré webhooks para Facebook
+              Ads y documenté los servicios usando <span class='text-white'>docusaurus.io</span>.
+            </p>
+            <p>
+              Para Americar y esemed, desarrollé sistemas de inventariado y landing pages optimizadas con <span class='text-white'>ReactJS</span> y <span
+                class='text-white'>NextJS</span
+              >, mejorando la experiencia del usuario y la visibilidad SEO. En Dpay, diseñé una aplicación para la captura de pagos, eliminando la necesidad de
+              pasarelas externas y estableciendo un sistema <span class='text-white'>seguro</span> y <span class='text-white'>eficiente</span>.
+            </p>
+          </div>
+          <div class='flex flex-row flex-wrap gap-2 mt-6'>
+            {
+              WORK_DTEMITE_ITEMS.map((item) => (
+                <div class='text-sm px-2 py-1 border border-zinc-800 rounded-full bg-zinc-900 flex flex-row gap-2 justify-center items-center'>
+                  <img src={item.imagen} alt={item.title} class='size-4' />
+                  {item.title}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</Container>
+
+<style>
+  article {
+    @apply relative before:absolute before:left-[-35px] ml-10 before:h-full before:border-l-4 before:border-zinc-800 pb-12 md:w-11/12;
+
+    &:last-child {
+      @apply pb-0;
+    }
+  }
+</style>
+
+<script>
+  const options = {
+    rootMargin: '0px',
+    threshold: window.innerWidth < 640 ? 0.3 : 0.8
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const itemsLinks = document.getElementsByClassName('item-link')
+        for (let item of itemsLinks) {
+          item.classList.remove('item-active')
+        }
+        document.querySelector('#works-link').classList.add('item-active')
+      }
+    })
+  }, options)
+
+  observer.observe(document.querySelector('#works'))
+</script>
