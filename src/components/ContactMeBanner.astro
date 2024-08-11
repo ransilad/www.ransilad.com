@@ -12,7 +12,7 @@ import TitleWithLine from './utils/TitleWithLine.astro'
       <article class='font-light text-zinc-400'>
         <h4 class='text-white text-xl md:text-2xl text-center md:text-left'>¡<strong class='text-primary'>Gracias</strong> por llegar hasta aquí!</h4>
         <p class='text-pretty text-zinc-400 md:text-lg font-lightmd:w-2/3 text-center md:text-left'>
-          Espero que este portfolio, hecho con mucho cariño, haya sido de su agrado.
+          Espero que esta información, hecha con mucho cariño, haya sido de tu agrado.
         </p>
         <SocialNetworks client:load />
       </article>
@@ -36,3 +36,23 @@ import TitleWithLine from './utils/TitleWithLine.astro'
     </div>
   </section>
 </Container>
+
+<script>
+  const options = {
+    rootMargin: '0px',
+    threshold: 1
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const itemsLinks = document.getElementsByClassName('item-link')
+        for (let item of itemsLinks) {
+          item.classList.remove('item-active')
+        }
+        document.querySelector('#contact-link').classList.add('item-active')
+      }
+    })
+  }, options)
+
+  observer.observe(document.querySelector('#contact'))
+</script>

@@ -12,3 +12,23 @@ import Container from './utils/Container.astro'
     </div>
   </section>
 </Container>
+
+<script>
+  const options = {
+    rootMargin: '0px',
+    threshold: 1
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const itemsLinks = document.getElementsByClassName('item-link')
+        for (let item of itemsLinks) {
+          item.classList.remove('item-active')
+        }
+        document.querySelector('#home-link').classList.add('item-active')
+      }
+    })
+  }, options)
+
+  observer.observe(document.querySelector('#home'))
+</script>
