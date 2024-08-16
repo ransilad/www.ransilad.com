@@ -1,109 +1,111 @@
 ---
 import Container from './utils/Container.astro'
 import TitleWithLine from './utils/TitleWithLine.astro'
+import { Picture } from 'astro:assets'
+import externalLinkIcon from '@assets/icons/external-link.svg'
 
 const WORK_KUBOS_ITEMS = [
   {
     title: 'Angular',
-    imagen: '/icons/angular.svg'
+    imagen: import('@assets/icons/brands/angular.svg')
   },
   {
     title: 'React Native',
-    imagen: '/icons/react-native.svg'
+    imagen: import('@assets/icons/brands/react-native.svg')
   },
   {
     title: 'Git',
-    imagen: '/icons/git.svg'
+    imagen: import('@assets/icons/brands/git.svg')
   },
   {
     title: 'Jenkins',
-    imagen: '/icons/jenkins.svg'
+    imagen: import('@assets/icons/brands/jenkins.svg')
   },
   {
     title: 'Docker',
-    imagen: '/icons/docker.svg'
+    imagen: import('@assets/icons/brands/docker.svg')
   },
   {
     title: 'Kubernetes',
-    imagen: '/icons/kubernetes.svg'
+    imagen: import('@assets/icons/brands/kubernetes.svg')
   },
   {
     title: 'Terraform',
-    imagen: '/icons/terraform.svg'
+    imagen: import('@assets/icons/brands/terraform.svg')
   },
   {
     title: 'Python',
-    imagen: '/icons/python.svg'
+    imagen: import('@assets/icons/brands/python.svg')
   }
 ]
 
 const WORK_ONA_ITEMS = [
   {
     title: 'Freelance',
-    imagen: '/icons/freelance.svg'
+    imagen: import('@assets/icons/brands/freelance.svg')
   },
   {
     title: 'React',
-    imagen: '/icons/react-native.svg'
+    imagen: import('@assets/icons/brands/react-native.svg')
   },
   {
     title: 'React Native',
-    imagen: '/icons/react-native.svg'
+    imagen: import('@assets/icons/brands/react-native.svg')
   },
   {
     title: 'Git',
-    imagen: '/icons/git.svg'
+    imagen: import('@assets/icons/brands/git.svg')
   },
   {
     title: 'Astro',
-    imagen: '/icons/astro.svg'
+    imagen: import('@assets/icons/brands/astro.svg')
   },
   {
     title: 'TailwindCSS',
-    imagen: '/icons/tailwind.svg'
+    imagen: import('@assets/icons/brands/tailwind.svg')
   },
   {
     title: 'Github Actions',
-    imagen: '/icons/github.svg'
+    imagen: import('@assets/icons/brands/git.svg')
   }
 ]
 
 const WORK_DTEMITE_ITEMS = [
   {
     title: 'Freelance',
-    imagen: '/icons/freelance.svg'
+    imagen: import('@assets/icons/brands/freelance.svg')
   },
   {
     title: 'React',
-    imagen: '/icons/react-native.svg'
+    imagen: import('@assets/icons/brands/react-native.svg')
   },
   {
     title: 'React Native',
-    imagen: '/icons/react-native.svg'
+    imagen: import('@assets/icons/brands/react-native.svg')
   },
   {
     title: 'Astro',
-    imagen: '/icons/astro.svg'
+    imagen: import('@assets/icons/brands/astro.svg')
   },
   {
     title: 'NextJS',
-    imagen: '/icons/nextjs.svg'
+    imagen: import('@assets/icons/brands/nextjs.svg')
   },
   {
     title: 'TailwindCSS',
-    imagen: '/icons/tailwind.svg'
+    imagen: import('@assets/icons/brands/tailwind.svg')
   },
   {
     title: 'Python',
-    imagen: '/icons/python.svg'
+    imagen: import('@assets/icons/brands/python.svg')
   },
   {
     title: 'Git',
-    imagen: '/icons/git.svg'
+    imagen: import('@assets/icons/brands/git.svg')
   },
   {
     title: 'Github Actions',
-    imagen: '/icons/github.svg'
+    imagen: import('@assets/icons/brands/git.svg')
   }
 ]
 ---
@@ -118,7 +120,7 @@ const WORK_DTEMITE_ITEMS = [
           <h2 class='md:text-lg'>
             <a href='https://www.kubos.cl/' target='_blank' rel='noreferrer' class='text-primary font-bold flex flex-row gap-2 items-center'>
               Desarrollador Fullstack - Kubos
-              <img src='/icons/external-link.svg' class='h-4' alt='' />
+              <span class='size-4'><Picture src={externalLinkIcon} alt='Icono de un enlace externo' /></span>
             </a>
           </h2>
           <p class='text-sm text-zinc-300'>Santiago, Chile <span class='text-zinc-500 px-1'>|</span> Abril 2022 - Actualidad</p>
@@ -138,7 +140,7 @@ const WORK_DTEMITE_ITEMS = [
             {
               WORK_KUBOS_ITEMS.map((item) => (
                 <div class='text-sm px-2 py-1 border border-zinc-800 rounded-full bg-zinc-900 flex flex-row gap-2 justify-center items-center'>
-                  <img src={item.imagen} alt={item.title} class='size-4' />
+                  <Picture src={item.imagen} alt={item.title} class='size-4' />
                   {item.title}
                 </div>
               ))
@@ -152,7 +154,7 @@ const WORK_DTEMITE_ITEMS = [
           <h2 class='md:text-lg'>
             <a href='https://www.onastrategy.com/' target='_blank' rel='noreferrer' class='text-primary font-bold flex flex-row gap-2 items-center'>
               React Developer - ONA
-              <img src='/icons/external-link.svg' class='h-4' alt='' />
+              <span><Picture src={externalLinkIcon} alt='Icono de un enlace externo' width='20' loading='eager' /></span>
             </a>
           </h2>
           <p class='text-sm text-zinc-300'>Austin, EEUU <span class='text-zinc-500 px-1'>|</span> Abril 2021 - Actualidad</p>
@@ -173,7 +175,7 @@ const WORK_DTEMITE_ITEMS = [
             {
               WORK_ONA_ITEMS.map((item) => (
                 <div class='text-sm px-2 py-1 border border-zinc-800 rounded-full bg-zinc-900 flex flex-row gap-2 justify-center items-center'>
-                  <img src={item.imagen} alt={item.title} class='size-4' />
+                  <Picture src={item.imagen} alt={item.title} class='size-4' />
                   {item.title}
                 </div>
               ))
@@ -187,7 +189,7 @@ const WORK_DTEMITE_ITEMS = [
           <h2 class='md:text-lg'>
             <a href='https://dtemite.cl/' target='_blank' rel='noreferrer' class='text-primary font-bold flex flex-row gap-2 items-center'>
               Fullstack Developer - Dtemite Ltda
-              <img src='/icons/external-link.svg' class='h-4' alt='' />
+              <span><Picture src={externalLinkIcon} alt='Icono de un enlace externo' width='20' loading='eager' /></span>
             </a>
           </h2>
           <p class='text-sm text-zinc-300'>Santiago, Chile <span class='text-zinc-500 px-1'>|</span> Febrero 2021 - Actualidad</p>
@@ -210,7 +212,7 @@ const WORK_DTEMITE_ITEMS = [
             {
               WORK_DTEMITE_ITEMS.map((item) => (
                 <div class='text-sm px-2 py-1 border border-zinc-800 rounded-full bg-zinc-900 flex flex-row gap-2 justify-center items-center'>
-                  <img src={item.imagen} alt={item.title} class='size-4' />
+                  <Picture src={item.imagen} alt={item.title} class='size-4' />
                   {item.title}
                 </div>
               ))
