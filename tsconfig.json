@@ -10,7 +10,10 @@
       ],
       "@icons/*": [
         "src/icons/*"
-      ]
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

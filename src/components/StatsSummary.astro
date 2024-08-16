@@ -1,13 +1,14 @@
 ---
-import Certs from '@icons/Certs.astro'
-import Projects from '@icons/Projects.astro'
-import Support from '@icons/Support.astro'
+import { Picture } from 'astro:assets'
+import certIcon from '@assets/icons/certs.svg'
+import projectIcon from '@assets/icons/projects.svg'
+import supportIcon from '@assets/icons/support.svg'
 ---
 
 <section class='grid md:grid-cols-2 lg:grid-cols-3 gap-10 rounded-3xl md:rounded-full border border-zinc-800 py-10 px-14 my-10 shadow-md'>
   <div class='flex flex-col md:flex-row gap-4 justify-center'>
     <div class='flex justify-center md:justify-start'>
-      <Certs />
+      <Picture src={certIcon} alt='Icono de un certificado' />
     </div>
     <div class='text-center md:text-left'>
       <p class='text-xl font-light text-zinc-400'>+10 años</p>
@@ -16,7 +17,7 @@ import Support from '@icons/Support.astro'
   </div>
   <div class='flex flex-col md:flex-row gap-4 justify-center'>
     <div class='flex justify-center md:justify-start'>
-      <Projects />
+      <Picture src={projectIcon} alt='Icono de un computador con un engranaje' />
     </div>
     <div class='text-center md:text-left'>
       <p class='text-xl font-light text-zinc-400'>+30 proyectos</p>
@@ -25,7 +26,7 @@ import Support from '@icons/Support.astro'
   </div>
   <div class='flex flex-col md:flex-row gap-4 justify-center'>
     <div class='flex justify-center md:justify-start'>
-      <Support />
+      <Picture src={supportIcon} alt='Icono de una persona dando un soporte' />
     </div>
     <div class='text-center md:text-left'>
       <p class='text-xl font-light text-zinc-400'>Soporte</p>
