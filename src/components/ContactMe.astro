@@ -1,5 +1,6 @@
 ---
-import Mail from '@icons/Mail.astro'
+import { Picture } from 'astro:assets'
+import mailIcon from '@assets/icons/mail.svg'
 import SocialNetworks from './SocialNetworks.jsx'
 import Container from './utils/Container.astro'
 import TitleWithLine from './utils/TitleWithLine.astro'
@@ -30,7 +31,7 @@ import TitleWithLine from './utils/TitleWithLine.astro'
           rel='noreferrer'
           class='text-primary font-semibold md:text-lg mt-2 flex flex-row gap-2 items-center'
         >
-          <Mail /> abeld.rangels@gmail.com
+          <span class='size-7'><Picture src={mailIcon} alt='Icono de un correo' /></span> abeld.rangels@gmail.com
         </a>
       </article>
     </div>
