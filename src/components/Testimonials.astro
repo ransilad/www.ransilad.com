@@ -37,8 +37,8 @@ const TESTIMONIALS = [
     <div class='mt-12 flex flex-col gap-6'>
       {
         TESTIMONIALS.map((testimonial) => (
-          <div class='rounded-xl border border-zinc-800 flex flex-col md:flex-row overflow-hidden'>
-            <div class='relative w-full md:w-56'>
+          <article class='rounded-xl border border-zinc-800 flex flex-col md:flex-row overflow-hidden'>
+            <header class='relative w-full md:w-56'>
               <Picture class='w-full rounded-[30px] p-6' src={testimonial.image} formats={['avif', 'webp']} alt={'Foto de perfil de ' + testimonial.name} />
               <Image
                 class='absolute inset-0 opacity-20 transform-gpu blur-md -z-10 block object-cover w-full aspect-square'
@@ -46,13 +46,13 @@ const TESTIMONIALS = [
                 alt={'Foto de fondo del perfil de ' + testimonial.name}
                 quality={100}
               />
-            </div>
-            <div class='flex-1 flex flex-col p-6'>
+            </header>
+            <footer class='flex-1 flex flex-col p-6'>
               <p class='text-pretty font-light text-zinc-400 md:mb-4 mt-6 md:mt-0 order-2 md:order-none'>{testimonial.testimonial}</p>
               <p class='text-primary font-semibold mt-auto md:text-right'>{testimonial.name}</p>
               <p class='text-sm font-semibold md:text-right'>{testimonial.position}</p>
-            </div>
-          </div>
+            </footer>
+          </article>
         ))
       }
     </div>
