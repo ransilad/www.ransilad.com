@@ -19,28 +19,16 @@ import closeMenuMobile from '@assets/icons/closeMenuMobile.svg'
         class='absolute md:relative inset-0 right-0 justify-center items-center flex md:block bg-zinc-950 md:bg-transparent bg-opacity-90 md:bg-opacity-0 transition-all ease-in-out duration-300 h-dvh md:h-auto -translate-x-full md:translate-x-0'
       >
         <ul class='flex gap-6 font-semibold flex-col md:flex-row text-center md:text-start'>
-          <li
-            id='home-link'
-            class='item-link border-b-2 border-transparent hover:border-primary text-white md:text-zinc-500 hover:text-zinc-300 text-2xl md:text-base'
-          >
+          <li id='home-link' class='item-link'>
             <a href='/#home'>Inicio</a>
           </li>
-          <li
-            id='about-link'
-            class='item-link border-b-2 border-transparent hover:border-primary text-white md:text-zinc-500 hover:text-zinc-300 text-2xl md:text-base'
-          >
+          <li id='about-link' class='item-link'>
             <a href='/#about'>Acerca de mi</a>
           </li>
-          <li
-            id='works-link'
-            class='item-link border-b-2 border-transparent hover:border-primary text-white md:text-zinc-500 hover:text-zinc-300 text-2xl md:text-base'
-          >
+          <li id='works-link' class='item-link'>
             <a href='/#works'>Experiencia Laboral</a>
           </li>
-          <li
-            id='contact-link'
-            class='item-link border-b-2 border-transparent hover:border-primary text-white md:text-zinc-500 hover:text-zinc-300 text-2xl md:text-base'
-          >
+          <li id='contact-link' class='item-link'>
             <a href='/#contact'>Contacto</a>
           </li>
         </ul>
@@ -98,7 +86,11 @@ import closeMenuMobile from '@assets/icons/closeMenuMobile.svg'
     }
 
     .item-active {
-      @apply border-primary text-zinc-300;
+      @apply border-primary text-zinc-300 !important;
+    }
+
+    .item-link {
+      @apply border-b-2 border-transparent font-light text-white md:text-zinc-200 hover:translate-y-1 transition-all text-2xl md:text-base;
     }
   }
 </style>
