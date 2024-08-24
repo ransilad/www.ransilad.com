@@ -6,7 +6,7 @@ import closeMenuMobile from '@assets/icons/closeMenuMobile.svg'
 ---
 
 <div class='fixed w-full z-50 scroll-shadow transition-all ease-in-out duration-300'>
-  <div class='w-10/12 sm:w-11/12 xl:w-3/4 mx-auto'>
+  <div class='w-10/12 sm:w-11/12 xl:w-3/4 mx-auto opacity-0 animate-opacity-fade-in'>
     <header class='my-5 flex items-center justify-between'>
       <a href='/#home'>
         <Picture src={logo} alt='Abel Rangel Logo' width='100' loading='eager' />
@@ -16,7 +16,7 @@ import closeMenuMobile from '@assets/icons/closeMenuMobile.svg'
         <Picture id='close-menu' class='hidden' src={closeMenuMobile} alt='Icono de menu para cerrar' width='40' loading='eager' />
       </span>
       <nav
-        class='absolute inset-0 right-0 justify-center items-center flex md:relative md:block bg-zinc-950 md:bg-transparent bg-opacity-90 md:bg-opacity-0 transition-all ease-in-out duration-300 h-dvh md:h-auto'
+        class='absolute md:relative inset-0 right-0 justify-center items-center flex md:block bg-zinc-950 md:bg-transparent bg-opacity-90 md:bg-opacity-0 transition-all ease-in-out duration-300 h-dvh md:h-auto -translate-x-full md:translate-x-0'
       >
         <ul class='flex gap-6 font-semibold flex-col md:flex-row text-center md:text-start'>
           <li
@@ -93,8 +93,6 @@ import closeMenuMobile from '@assets/icons/closeMenuMobile.svg'
 
 <style>
   nav {
-    transform: translateX(-100%);
-
     &.show-menu {
       transform: translateX(0);
     }
