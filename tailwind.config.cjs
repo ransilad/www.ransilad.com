@@ -24,19 +24,24 @@ module.exports = {
           '50%': { translate: '0 -15px' },
           '100%': { translate: '0 0' }
         },
-        'opacity-fade-in': {
+        'fade-in': {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 }
         },
-        'opacity-translate-y-fade-in': {
-          '0%': { opacity: 0, transform: 'translateY(-10px)' },
+        'fade-in-down': {
+          '0%': { opacity: 0, transform: 'translateY(-30px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' }
+        },
+        rotate: {
+          '0%': { transform: 'rotate(0deg) scale(10)' },
+          '100%': { transform: 'rotate(-360deg) scale(10)' }
         }
       },
       animation: {
         float: 'float 3s ease-in-out infinite alternate',
-        'opacity-fade-in': 'opacity-fade-in 1s var(--animation-delay, 0ms) ease forwards',
-        'opacity-translate-y-fade-in': 'opacity-translate-y-fade-in 1s var(--animation-delay, 0ms) ease forwards'
+        'fade-in': 'fade-in 1s var(--animation-delay, 0ms) ease forwards',
+        'fade-in-down': 'fade-in-down 1s var(--animation-delay, 0ms) ease forwards',
+        rotate: 'rotate 10s linear infinite'
       },
       boxShadow: {
         '3xl-center': '0 0px 104px -40px'
