@@ -3,17 +3,3 @@ html {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
 }
-
-body::before {
-  background-blend-mode: difference;
-  background-image: url('/pattern.svg');
-  background-position-x: 40%;
-  background-position-y: top;
-  background-repeat: no-repeat;
-  content: '';
-  height: 100%;
-  inset: 0;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}

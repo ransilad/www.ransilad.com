@@ -5,6 +5,7 @@ import Container from './utils/Container.astro'
 ---
 
 <Container>
+  <div class='absolute top-0 left-0 right-0 h-dvh pattern -z-10'></div>
   <section id='home'>
     <div class='flex flex-col justify-between min-h-screen opacity-0 [--animation-delay:200ms] animate-fade-in-down'>
       <MyProfile />
@@ -32,3 +33,16 @@ import Container from './utils/Container.astro'
 
   observer.observe(document.querySelector('#home'))
 </script>
+
+<style>
+  .pattern {
+    mask-image: linear-gradient(to bottom, black 10%, transparent 700px);
+    background-image: url('/pattern.svg');
+    opacity: 0.05;
+
+    /* Media querie for mobile */
+    @media (max-width: 768px) {
+      mask-image: linear-gradient(to bottom, black 10%, transparent 500px);
+    }
+  }
+</style>
