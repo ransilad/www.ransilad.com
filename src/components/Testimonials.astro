@@ -39,7 +39,7 @@ const TESTIMONIALS = [
       class='flex flex-row gap-2 italic text-sm text-primary -mt-9 w-fit'
     >
       Ver en LinkedIn
-      <span><Picture src={externalLinkIcon} alt='Icono de un enlace externo' width='20' /></span>
+      <span><Picture src={externalLinkIcon} alt='Icono de un enlace externo' width={16} height={16} /></span>
     </a>
     <div class='mt-12 flex flex-col gap-6'>
       {
@@ -51,7 +51,14 @@ const TESTIMONIALS = [
                 <p class='text-primary font-semibold mt-auto md:text-right'>{testimonial.name}</p>
                 <p class='text-sm font-semibold md:text-right'>{testimonial.position}</p>
               </div>
-              <Picture class='size-12 rounded-full' src={testimonial.image} formats={['avif', 'webp']} alt={'Foto de perfil de ' + testimonial.name} />
+              <Picture
+                class='size-12 rounded-full'
+                src={testimonial.image}
+                formats={['avif', 'webp']}
+                alt={'Foto de perfil de ' + testimonial.name}
+                width={48}
+                height={48}
+              />
             </div>
           </article>
         ))
