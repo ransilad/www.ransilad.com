@@ -13,10 +13,7 @@ module.exports = {
         '2xs': '0.625rem'
       },
       colors: {
-        concrete: '#F3F3F3',
-        primary: '#00ca5b',
-        emperor: '#515151',
-        background: '#0c0a09'
+        primary: '#00ca5b'
       },
       keyframes: {
         float: {
