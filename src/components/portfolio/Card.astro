@@ -1,0 +1,52 @@
+---
+import { Picture } from 'astro:assets'
+import Ribbon from '../Ribbon.astro'
+
+export interface CardProps {
+  item: any
+}
+
+const { item } = Astro.props
+---
+
+<div class='relative flex flex-col overflow-clip rounded-xl border border-zinc-800 p-1'>
+  {item.isPersonal && <Ribbon>Personal</Ribbon>}
+  <Picture class='object-cover rounded-lg' src={item.image} alt={item.title} width={500} height={279} />
+  <div class='p-3'>
+    <h3 class='text-primary font-semibold mt-2 text-lg'>{item.title}</h3>
+    <p class='text-pretty text-sm md:text-base text-zinc-400 font-light mt-4'>{item.description || ''}</p>
+    <div class='flex gap-2 flex-wrap mt-6 text-sm'>
+      {item.tags.map((tag: string) => <span class='bg-zinc-900 rounded-lg px-2 py-1 text-white cursor-default'>{tag}</span>)}
+    </div>
+  </div>
+  <div class='flex mt-auto'>
+    {
+      item.githubUrl && (
+        <div class='mr-auto px-3 pb-5 pt-3'>
+          <a
+            href={item.githubUrl}
+            target='_blank'
+            rel='noreferrer'
+            class='text-sm font-semibold px-4 py-2 border border-zinc-800 cursor-pointer rounded-md hover:bg-zinc-900'
+          >
+            Ver código
+          </a>
+        </div>
+      )
+    }
+    <div class='ml-auto px-3 pb-5 pt-3'>
+      {
+        item.url && (
+          <a
+            href={item.url}
+            target='_blank'
+            rel='noreferrer'
+            class='text-sm font-semibold px-4 py-2 border border-zinc-800 cursor-pointer rounded-md hover:bg-zinc-900'
+          >
+            Visitar sitio
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>

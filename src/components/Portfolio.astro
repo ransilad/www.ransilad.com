@@ -1,14 +1,14 @@
 ---
-import ArrowRight from '@icons/ArrowRight.astro'
-import Ribbon from './Ribbon.astro'
+import Card from './portfolio/Card.astro'
 import Container from './utils/Container.astro'
+import TitleWithLine from './utils/TitleWithLine.astro'
 
 export const PORTFOLIO_ITEMS = [
   {
     id: 'inlet',
     category: ['all', 'web', 'mobile'],
     title: 'Inlet',
-    image: '/images/portfolio/inlet.avif',
+    image: import('@assets/images/portfolio/inlet.avif'),
     tags: ['ReactJS', 'React Native', 'JavaScript', 'HTML', 'CSS', 'AWS', 'Gitlab', 'Google Analytics', 'Google Tag Manager'],
     description: 'Plataforma que facilita la conexión entre comunidades.'
   },
@@ -16,7 +16,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'voyhoy',
     category: ['all', 'web', 'api'],
     title: 'Voyhoy',
-    image: '/images/portfolio/voyhoy.avif',
+    image: import('@assets/images/portfolio/voyhoy.avif'),
     tags: ['AngularJS', 'JavaScript', 'HTML', 'CSS', 'Python', 'PostgreSQL', 'AWS', 'Github', 'Adyen', 'PayU', 'Paypal', 'Voucherify', 'Optimizely'],
     description:
       'Plataforma que permite a los usuarios planificar sus viajes, incluyendo la posibilidad de ' +
@@ -26,7 +26,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'damath',
     category: ['all', 'web'],
     title: 'Damath',
-    image: '/images/portfolio/damath.avif',
+    image: import('@assets/images/portfolio/damath.avif'),
     tags: ['Design', 'HTML', 'CSS', 'Wordpress'],
     description: 'Sitio web para gestionar ventas de productos cortados con láser.'
   },
@@ -34,7 +34,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'techk',
     category: ['all', 'web', 'api'],
     title: 'techk',
-    image: '/images/portfolio/techk.avif',
+    image: import('@assets/images/portfolio/techk.avif'),
     url: 'https://www.instoreview.com/inicio',
     tags: ['Nextjs', 'JavaScript', 'HTML', 'CSS', 'Python', 'Docker'],
     description: 'Plataforma que permite clasificar los productos que entran a las tiendas.'
@@ -43,7 +43,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'cocha',
     category: ['all', 'web', 'api'],
     title: 'Cocha',
-    image: '/images/portfolio/cocha.avif',
+    image: import('@assets/images/portfolio/cocha.avif'),
     url: 'https://www.cocha.com/',
     tags: ['Angular 7', 'JavaScript', 'Bootstrap', 'HTML', 'CSS', 'NodeJS', 'Bitbucket', 'MySql'],
     description: 'Sistema web que ayudar a los vendedores a gestionar los pasajes de sus clientes.'
@@ -52,7 +52,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'tendy',
     category: ['all', 'web', 'api', 'mobile'],
     title: 'Tendy',
-    image: '/images/portfolio/tendy.avif',
+    image: import('@assets/images/portfolio/tendy.avif'),
     url: 'https://tendy.cash/',
     tags: ['VueJS', 'React Native', 'JavaScript', 'HTML', 'CSS', 'NodeJS', 'AWS', 'Github'],
     description: 'Plataforma que permite “Otorgar propinas de una forma fácil y anónima”.'
@@ -61,7 +61,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'idc',
     category: ['all', 'web'],
     title: 'IDC',
-    image: '/images/portfolio/idc.avif',
+    image: import('@assets/images/portfolio/idc.avif'),
     tags: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'AWS', 'Github'],
     description: 'Sistema de gestión de contenido y educación.'
   },
@@ -69,7 +69,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'a21',
     category: ['all', 'mobile'],
     title: 'A21',
-    image: '/images/portfolio/a21.avif',
+    image: import('@assets/images/portfolio/a21.avif'),
     url: 'https://www.antarctica21.com/',
     tags: ['React Native', 'JavaScript', 'HTML', 'CSS', 'Redux'],
     description: 'Aplicación móvil que permite gestionar toda la experiencia del viaje, desde la reserva hasta el check-out'
@@ -78,7 +78,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'dtemite',
     category: ['all', 'mobile', 'api'],
     title: 'Dtemite',
-    image: '/images/portfolio/dtemite.avif',
+    image: import('@assets/images/portfolio/dtemite.avif'),
     url: 'https://www.dtemite.cl/',
     tags: ['Python', 'Flask', 'React Native', 'JavaScript', 'HTML', 'CSS', 'Redux', 'Bitbucket', 'Redis'],
     description: 'ERP que centraliza la información referente al SII en un solo sitio.'
@@ -87,7 +87,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'nrp',
     category: ['all', 'web'],
     title: 'NextRoundPartners',
-    image: '/images/portfolio/nrp.avif',
+    image: import('@assets/images/portfolio/nrp.avif'),
     url: 'https://www.nextroundpartners.com/',
     tags: ['ReactJS', 'JavaScript', 'Design', 'HTML', 'CSS', 'Bootstrap'],
     description: 'Sitio web para la empresa NextRoundPartners.'
@@ -96,7 +96,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'ona',
     category: ['all', 'web'],
     title: 'OnaStudio',
-    image: '/images/portfolio/ona.avif',
+    image: import('@assets/images/portfolio/ona.avif'),
     url: 'https://www-onastudio-co.vercel.app/',
     tags: ['NextJS', 'JavaScript', 'Design', 'HTML', 'CSS'],
     description: 'Sitio web para la empresa OnaStudio.'
@@ -105,7 +105,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'lopesa',
     category: ['all', 'web', 'mobile'],
     title: 'Lopesa',
-    image: '/images/portfolio/lopesa.avif',
+    image: import('@assets/images/portfolio/lopesa.avif'),
     url: 'http://sazonlopesa.com/aplicativo2',
     tags: ['Angular 12', 'JavaScript', 'HTML', 'CSS', 'Ionic', 'Bootstrap', 'Github'],
     description: 'Plataforma que permite gestionar productos.'
@@ -115,7 +115,7 @@ export const PORTFOLIO_ITEMS = [
     isPersonal: true,
     category: ['all', 'web'],
     title: 'SVP Condominio',
-    image: '/images/portfolio/svp-condominio.avif',
+    image: import('@assets/images/portfolio/svp-condominio.avif'),
     url: 'https://condominio-svp.vercel.app/',
     tags: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Github'],
     description: 'Plataforma que permite gestionar toda la información de su condominio.',
@@ -125,7 +125,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'arrows-sports',
     category: ['all', 'web'],
     title: 'Arrows Santiago Sports',
-    image: '/images/portfolio/arrows-sports.avif',
+    image: import('@assets/images/portfolio/arrows-sports.avif'),
     url: 'https://arrows.santiagosport.cl/',
     tags: ['Nextjs', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
     description: 'Sitio web para la empresa Arrows Santiago Sports.'
@@ -134,7 +134,7 @@ export const PORTFOLIO_ITEMS = [
     id: 'blog-arrows-sports',
     category: ['all', 'web'],
     title: 'Blog Arrows Santiago Sports',
-    image: '/images/portfolio/blog-arrows-sports.avif',
+    image: import('@assets/images/portfolio/blog-arrows-sports.avif'),
     url: 'https://blog.arrows.santiagosport.cl/',
     tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
     description: 'Blog para la empresa Arrows Santiago Sports.'
@@ -144,7 +144,7 @@ export const PORTFOLIO_ITEMS = [
     isPersonal: true,
     category: ['all', 'web'],
     title: 'Juegos',
-    image: '/images/portfolio/games-ransilad.avif',
+    image: import('@assets/images/portfolio/games-ransilad.avif'),
     url: 'https://games.ransilad.com/',
     tags: ['Astro', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS'],
     description: 'Página web que junta diferentes juegos creados por mi (Abel Rangel).',
@@ -155,7 +155,7 @@ export const PORTFOLIO_ITEMS = [
     isPersonal: true,
     category: ['all', 'web'],
     title: 'Juego Tres en Raya',
-    image: '/images/portfolio/tres-en-raya-ransilad.avif',
+    image: import('@assets/images/portfolio/tres-en-raya-ransilad.avif'),
     url: 'https://tres-en-raya.ransilad.com/',
     tags: ['ReactJS', 'HTML', 'CSS', 'JavaScript', 'Github', 'TailwindCSS', 'Vite', 'Firebase', 'Realtime Database'],
     description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.',
@@ -166,7 +166,7 @@ export const PORTFOLIO_ITEMS = [
     isPersonal: true,
     category: ['all', 'web', 'openAI'],
     title: 'Buscador de sinónimos, antónimos y definiciones',
-    image: '/images/portfolio/syn-ant-definition-finder.avif',
+    image: import('@assets/images/portfolio/syn-ant-definition-finder.avif'),
     url: 'https://syn-ant-definition-finder.ransilad.com/',
     tags: ['NextJS', 'JavaScript', 'Design', 'HTML', 'CSS', 'OpenAI'],
     description: 'Buscador de sinónimos, antónimos y definiciones, el cual hace uso de la API de OpenAI.',
@@ -175,53 +175,31 @@ export const PORTFOLIO_ITEMS = [
 ]
 ---
 
-<section id='portfolio' class='bg-concrete mt-20 md:pt-32 py-14'>
-  <Container>
-    <h2 class='text-3xl font-bold text-center'>Portafolio</h2>
+<Container>
+  <section id='portfolio' class='py-6 md:py-10'>
+    <TitleWithLine>Proyectos</TitleWithLine>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16'>
-      {
-        PORTFOLIO_ITEMS.sort((a, b) => a.title.localeCompare(b.title)).map((item) => (
-          <div class='relative overflow-hidden rounded-lg bg-white shadow-md flex flex-col hover:scale-105 transition-all'>
-            {item.isPersonal && <Ribbon>Personal</Ribbon>}
-            <img class='rounded-t-lg' src={item.image} width={500} height={279} alt={item.title} />
-            <div class='p-5'>
-              <h3 class='font-semibold mt-2'>{item.title}</h3>
-              <p class='text-md font-light mt-4'>{item.description || ''}</p>
-              <div class='flex gap-2 flex-wrap mt-6 text-[.7rem]'>
-                {item.tags.map((tag, index) => (
-                  <span class='bg-primary rounded-full px-2 py-1 text-white cursor-default'>{tag}</span>
-                ))}
-              </div>
-            </div>
-            <div class='flex mt-auto'>
-              {item.githubUrl && (
-                <div class='mr-auto p-5'>
-                  <a
-                    href={item.githubUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                    class='text-sm font-semibold flex flex-row flex-nowrap gap-2 border-b-2 border-transparent hover:border-b-2 hover:border-primary'
-                  >
-                    Ver código <ArrowRight />
-                  </a>
-                </div>
-              )}
-              <div class=' ml-auto p-5'>
-                {item.url && (
-                  <a
-                    href={item.url}
-                    target='_blank'
-                    rel='noreferrer'
-                    class='text-sm font-semibold flex flex-row flex-nowrap gap-2 border-b-2 border-transparent hover:border-b-2 hover:border-primary'
-                  >
-                    Visitar sitio <ArrowRight />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        ))
-      }
+      {PORTFOLIO_ITEMS.sort((a, b) => a.title.localeCompare(b.title)).map((item) => <Card item={item} />)}
     </div>
-  </Container>
-</section>
+  </section>
+</Container>
+
+<script>
+  const options = {
+    rootMargin: '0px',
+    threshold: 0
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const itemsLinks = document.getElementsByClassName('item-link')
+        for (let item of itemsLinks) {
+          item.classList.remove('item-active')
+        }
+        document.querySelector('#portfolio-link').classList.add('item-active')
+      }
+    })
+  }, options)
+
+  observer.observe(document.querySelector('#portfolio'))
+</script>
