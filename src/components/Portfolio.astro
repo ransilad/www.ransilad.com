@@ -178,7 +178,7 @@ export const PORTFOLIO_ITEMS = [
 <Container>
   <section id='portfolio' class='py-6 md:py-10'>
     <TitleWithLine>Proyectos</TitleWithLine>
-    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16'>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {PORTFOLIO_ITEMS.sort((a, b) => a.title.localeCompare(b.title)).map((item) => <Card item={item} />)}
     </div>
   </section>
