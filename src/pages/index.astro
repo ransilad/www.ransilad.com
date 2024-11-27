@@ -21,6 +21,7 @@ import '@fontsource/poppins/800.css'
 import '@fontsource/poppins/900.css'
 
 import './_index.css'
+import { ViewTransitions } from 'astro:transitions'
 ---
 
 <html lang='es'>
@@ -49,6 +50,8 @@ import './_index.css'
     <meta name='twitter:title' content='Abel Rangel' />
     <meta name='twitter:description' content='Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo.' />
     <meta name='twitter:image' content='https://www.ransilad.com/cover.jpg' />
+
+    <ViewTransitions />
   </head>
   <body class='antialiased'>
     <Header />
