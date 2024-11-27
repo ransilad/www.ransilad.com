@@ -1,206 +1,65 @@
 ---
+import { PORTFOLIO_ITEMS } from 'src/constants'
+
 import Card from './portfolio/Card.astro'
 import Container from './utils/Container.astro'
 import TitleWithLine from './utils/TitleWithLine.astro'
 
-export const PORTFOLIO_ITEMS = [
-  {
-    id: 'inlet',
-    title: 'Inlet',
-    image: import('@assets/images/portfolio/inlet.avif'),
-    tags: ['ReactJS', 'React Native', 'JavaScript', 'HTML/CSS', 'AWS', 'Gitlab', 'Google Analytics', 'Google Tag Manager'],
-    description: 'Plataforma que facilita la conexión entre comunidades.'
-  },
-  {
-    id: 'voyhoy',
-    title: 'Voyhoy',
-    image: import('@assets/images/portfolio/voyhoy.avif'),
-    tags: ['AngularJS', 'JavaScript', 'HTML/CSS', 'Python', 'PostgreSQL', 'AWS', 'Github', 'Adyen', 'PayU', 'Paypal', 'Voucherify', 'Optimizely'],
-    description:
-      'Plataforma que permite a los usuarios planificar sus viajes, incluyendo la posibilidad de ' +
-      'conexiones entre diferentes tipos de transporte, lo que denominamos Smart Ticket.'
-  },
-  {
-    id: 'damath',
-    title: 'Damath',
-    image: import('@assets/images/portfolio/damath.avif'),
-    tags: ['Design', 'HTML/CSS', 'Wordpress'],
-    description: 'Sitio web para gestionar ventas de productos cortados con láser.'
-  },
-  {
-    id: 'techk',
-    title: 'techk',
-    image: import('@assets/images/portfolio/techk.avif'),
-    url: 'https://www.instoreview.com/inicio',
-    tags: ['Next.js', 'JavaScript', 'HTML/CSS', 'Python', 'Docker'],
-    description: 'Plataforma que permite clasificar los productos que entran a las tiendas.'
-  },
-  {
-    id: 'cocha',
-    title: 'Cocha',
-    image: import('@assets/images/portfolio/cocha.avif'),
-    url: 'https://www.cocha.com/',
-    tags: ['Angular 7', 'JavaScript', 'Bootstrap', 'HTML/CSS', 'NodeJS', 'Bitbucket', 'MySql'],
-    description: 'Sistema web que ayudar a los vendedores a gestionar los pasajes de sus clientes.'
-  },
-  {
-    id: 'tendy',
-    title: 'Tendy',
-    image: import('@assets/images/portfolio/tendy.avif'),
-    url: 'https://tendy.cash/',
-    tags: ['VueJS', 'React Native', 'JavaScript', 'HTML/CSS', 'NodeJS', 'AWS', 'Github'],
-    description: 'Plataforma que permite “Otorgar propinas de una forma fácil y anónima”.'
-  },
-  {
-    id: 'idc',
-    title: 'IDC',
-    image: import('@assets/images/portfolio/idc.avif'),
-    tags: ['ReactJS', 'JavaScript', 'HTML/CSS', 'Bootstrap', 'AWS', 'Github'],
-    description: 'Sistema de gestión de contenido y educación.'
-  },
-  {
-    id: 'a21',
-    title: 'A21',
-    image: import('@assets/images/portfolio/a21.avif'),
-    url: 'https://www.antarctica21.com/',
-    tags: ['React Native', 'JavaScript', 'HTML/CSS', 'Redux'],
-    description: 'Aplicación móvil que permite gestionar toda la experiencia del viaje, desde la reserva hasta el check-out'
-  },
-  {
-    id: 'dtemite',
-    title: 'Dtemite',
-    image: import('@assets/images/portfolio/dtemite.avif'),
-    url: 'https://www.dtemite.cl/',
-    tags: ['Python', 'Flask', 'React Native', 'JavaScript', 'HTML/CSS', 'Redux', 'Bitbucket', 'Redis'],
-    description: 'ERP que centraliza la información referente al SII en un solo sitio.'
-  },
-  {
-    id: 'nrp',
-    title: 'NextRoundPartners',
-    image: import('@assets/images/portfolio/nrp.avif'),
-    url: 'https://www.nextroundpartners.com/',
-    tags: ['ReactJS', 'JavaScript', 'Design', 'HTML/CSS', 'Bootstrap'],
-    description: 'Sitio web para la empresa NextRoundPartners.'
-  },
-  {
-    id: 'ona',
-    title: 'OnaStudio',
-    image: import('@assets/images/portfolio/ona.avif'),
-    url: 'https://www-onastudio-co.vercel.app/',
-    tags: ['Next.js', 'JavaScript', 'Design', 'HTML/CSS'],
-    description: 'Sitio web para la empresa OnaStudio.'
-  },
-  {
-    id: 'lopesa',
-    title: 'Lopesa',
-    image: import('@assets/images/portfolio/lopesa.avif'),
-    url: 'http://sazonlopesa.com/aplicativo2',
-    tags: ['Angular 12', 'JavaScript', 'HTML/CSS', 'Ionic', 'Bootstrap', 'Github'],
-    description: 'Plataforma que permite gestionar productos.'
-  },
-  {
-    id: 'svp-condominio',
-    isPersonal: true,
-    title: 'SVP Condominio',
-    image: import('@assets/images/portfolio/svp-condominio.avif'),
-    url: 'https://condominio-svp.vercel.app/',
-    tags: ['ReactJS', 'JavaScript', 'HTML/CSS', 'Bootstrap', 'Github'],
-    description: 'Plataforma que permite gestionar toda la información de su condominio.',
-    githubUrl: 'https://github.com/ransilad/condominio-svp'
-  },
-  {
-    id: 'arrows-sports',
-    title: 'Arrows Santiago Sports',
-    image: import('@assets/images/portfolio/arrows-sports.avif'),
-    url: 'https://arrows.santiagosport.cl/',
-    tags: ['Next.js', 'HTML/CSS', 'JavaScript', 'Github', 'TailwindCSS'],
-    description: 'Sitio web para la empresa Arrows Santiago Sports.'
-  },
-  {
-    id: 'blog-arrows-sports',
-    title: 'Blog Arrows Santiago Sports',
-    image: import('@assets/images/portfolio/blog-arrows-sports.avif'),
-    url: 'https://blog.arrows.santiagosport.cl/',
-    tags: ['Astro', 'HTML/CSS', 'JavaScript', 'Github', 'TailwindCSS'],
-    description: 'Blog para la empresa Arrows Santiago Sports.'
-  },
-  {
-    id: 'games-ransilad',
-    isPersonal: true,
-    title: 'Juegos',
-    image: import('@assets/images/portfolio/games-ransilad.avif'),
-    url: 'https://games.ransilad.com/',
-    tags: ['Astro', 'HTML/CSS', 'JavaScript', 'Github', 'TailwindCSS'],
-    description: 'Página web que junta diferentes juegos creados por mi (Abel Rangel).',
-    githubUrl: 'https://github.com/ransilad/games.ransildad.com'
-  },
-  {
-    id: 'tres-en-raya-ransilad',
-    isPersonal: true,
-    title: 'Juego Tres en Raya',
-    image: import('@assets/images/portfolio/tres-en-raya-ransilad.avif'),
-    url: 'https://tres-en-raya.ransilad.com/',
-    tags: ['ReactJS', 'HTML/CSS', 'JavaScript', 'Github', 'TailwindCSS', 'Vite', 'Firebase', 'Realtime Database'],
-    description: 'Juego de tres en raya, el cual dispone de 3 modos de juego: local, contra el bot (fácil o difícil) y multijugador.',
-    githubUrl: 'https://github.com/ransilad/tres-en-raya.ransilad.com'
-  },
-  {
-    id: 'syn-ant-definition-finder',
-    isPersonal: true,
-    title: 'Buscador de sinónimos, antónimos y definiciones',
-    image: import('@assets/images/portfolio/syn-ant-definition-finder.avif'),
-    url: 'https://syn-ant-definition-finder.ransilad.com/',
-    tags: ['Next.js', 'JavaScript', 'Design', 'HTML/CSS', 'OpenAI'],
-    description: 'Buscador de sinónimos, antónimos y definiciones, el cual hace uso de la API de OpenAI.',
-    githubUrl: 'https://github.com/ransilad/syn-ant-definition-finder'
-  },
-  {
-    id: 'memory-game',
-    isPersonal: true,
-    title: 'Memoría',
-    image: import('@assets/images/portfolio/memory-game.avif'),
-    url: 'https://memory.ransilad.com/',
-    tags: ['React', 'JavaScript', 'Design', 'HTML/CSS', 'Vercel'],
-    description: 'En este juego, el jugador debe ingresar su nombre, luego levantar una carta y buscar su pareja hasta completar el tablero.',
-    githubUrl: 'https://github.com/ransilad/memory-game'
-  },
-  {
-    id: 'esemed',
-    isPersonal: false,
-    title: 'ESEMED',
-    image: import('@assets/images/portfolio/esemed.avif'),
-    url: 'https://www.esemed.cl/',
-    tags: ['Next.js', 'JavaScript', 'Design', 'HTML/CSS'],
-    description: 'ESEMED, es una landing page que permite a los usuarios conocer los productos de Innovación médica estética.'
-  }
-]
+const { showAll } = Astro.props
 ---
 
 <Container>
-  <section id='portfolio' class='py-6 md:py-10'>
+  <section id='portfolio' class={'py-6 md:py-10 z-10 relative ' + (showAll ? '' : 'mask-image')}>
     <TitleWithLine>Proyectos</TitleWithLine>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-      {PORTFOLIO_ITEMS.sort((a, b) => a.title.localeCompare(b.title)).map((item) => <Card item={item} />)}
+      {
+        PORTFOLIO_ITEMS.sort((a, b) => a.title.localeCompare(b.title))
+          .filter((item) => (showAll ? true : item.isTop))
+          .map((item, index) => <Card item={item} hideOnMobile={showAll ? false : index > 1} />)
+      }
     </div>
   </section>
+  {
+    !showAll && (
+      <div class='z-20 absolute left-0 right-0 bottom-10 flex justify-center items-center'>
+        <a href='/projects' class='text-primary font-semibold md:text-lg border border-zinc-700 rounded-md px-4 py-2 bg-zinc-900 hover:bg-zinc-800'>
+          Ver todos los proyectos
+        </a>
+      </div>
+    )
+  }
 </Container>
 
 <script>
-  const options = {
-    rootMargin: '0px',
-    threshold: 0
-  }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const itemsLinks = document.getElementsByClassName('item-link')
-        for (let item of itemsLinks) {
-          item.classList.remove('item-active')
+  document.addEventListener('astro:page-load', () => {
+    const options = {
+      rootMargin: '0px',
+      threshold: 0.3
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const itemsLinks = document.getElementsByClassName('item-link')
+          for (let item of itemsLinks) {
+            item.classList.remove('item-active')
+          }
+          document.querySelector('#portfolio-link').classList.add('item-active')
         }
-        document.querySelector('#portfolio-link').classList.add('item-active')
-      }
-    })
-  }, options)
+      })
+    }, options)
 
-  observer.observe(document.querySelector('#portfolio'))
+    document.querySelector('#portfolio') && observer.observe(document.querySelector('#portfolio'))
+  })
 </script>
+
+<style>
+  .mask-image {
+    mask-image: linear-gradient(#000 0%, transparent 88%);
+    -webkit-mask-image: linear-gradient(#000 0%, transparent 88%);
+
+    @media (max-width: 768px) {
+      mask-image: linear-gradient(#000 0%, transparent 90%);
+      -webkit-mask-image: linear-gradient(#000 0%, transparent 90%);
+    }
+  }
+</style>

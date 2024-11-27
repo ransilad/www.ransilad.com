@@ -1,0 +1,70 @@
+---
+import SpeedInsights from '@vercel/speed-insights/astro'
+
+import Header from '@components/Header.astro'
+import Landing from '@components/Landing.astro'
+import AboutMe from '@components/AboutMe.astro'
+import Works from '@components/Works.astro'
+import Portfolio from '@components/Portfolio.astro'
+import Testimonials from '@components/Testimonials.astro'
+import ContactMe from '@components/ContactMe.astro'
+import Footer from '@components/Footer.astro'
+
+import '@fontsource/poppins/100.css'
+import '@fontsource/poppins/200.css'
+import '@fontsource/poppins/300.css'
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/600.css'
+import '@fontsource/poppins/700.css'
+import '@fontsource/poppins/800.css'
+import '@fontsource/poppins/900.css'
+
+import './_index.css'
+import { ViewTransitions } from 'astro:transitions'
+---
+
+<html lang='es'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Abel Rangel</title>
+    <meta name='description' content='Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo.' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='google' content='nositelinkssearchbox' />
+    <meta name='google' content='notranslate' />
+
+    <link rel='icon' href='/favicon.png' />
+
+    {/* Facebook Meta Tags */}
+    <meta property='og:url' content='https://www.ransilad.com/' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content='Abel Rangel' />
+    <meta property='og:description' content='Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo.' />
+    <meta property='og:image' content='https://www.ransilad.com/cover.jpg' />
+
+    {/* Twitter Meta Tags */}
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:domain' content='ransilad.com' />
+    <meta name='twitter:url' content='https://www.ransilad.com/' />
+    <meta name='twitter:title' content='Abel Rangel' />
+    <meta name='twitter:description' content='Entusiasta de la tecnología, empático, responsable, con capacidad de escucha, compromiso y trabajo en equipo.' />
+    <meta name='twitter:image' content='https://www.ransilad.com/cover.jpg' />
+
+    <ViewTransitions />
+  </head>
+  <body class='antialiased'>
+    <Header />
+    <div class='pt-20'>
+      <div class='-z-10 w-60 md:w-40 blur-[200px] top-6 h-40 rounded-full bg-primary absolute pointer-events-none select-none md:top-32 left-0'></div>
+      <div class='hidden md:block -z-10 w-60 blur-[200px] h-60 rounded-full bg-primary absolute pointer-events-none select-none top-80 md:top-56 right-0'></div>
+
+      <Portfolio showAll />
+    </div>
+    <ContactMe />
+    <Footer />
+
+    <!-- @ts-ignore -->
+    <SpeedInsights />
+  </body>
+</html>
