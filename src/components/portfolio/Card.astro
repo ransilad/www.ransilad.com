@@ -14,7 +14,7 @@ const { item } = Astro.props
   <Picture class='object-cover rounded-lg' src={item.image} alt={item.title} width={500} height={279} />
   <div class='px-3 py-4'>
     <h3 class='text-primary font-semibold text-lg'>{item.title}</h3>
-    <p class='text-pretty text-sm md:text-base text-zinc-400 font-light mt-2'>{item.description || ''}</p>
+    <p class='text-pretty text-sm md:text-base text-zinc-300 font-light mt-2'>{item.description || ''}</p>
     <div class='flex gap-1 flex-wrap mt-6 text-sm'>
       {item.tags.map((tag: string) => <span class='bg-zinc-800 rounded-lg px-2 py-1 text-white cursor-default'>{tag}</span>)}
     </div>
