@@ -39,21 +39,23 @@ import TitleWithLine from './utils/TitleWithLine.astro'
 </Container>
 
 <script>
-  const options = {
-    rootMargin: '0px',
-    threshold: window.innerWidth < 640 ? 0.3 : 0.8
-  }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const itemsLinks = document.getElementsByClassName('item-link')
-        for (let item of itemsLinks) {
-          item.classList.remove('item-active')
+  document.addEventListener('astro:page-load', () => {
+    const options = {
+      rootMargin: '0px',
+      threshold: window.innerWidth < 640 ? 0.3 : 0.8
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const itemsLinks = document.getElementsByClassName('item-link')
+          for (let item of itemsLinks) {
+            item.classList.remove('item-active')
+          }
+          document.querySelector('#contact-link').classList.add('item-active')
         }
-        document.querySelector('#contact-link').classList.add('item-active')
-      }
-    })
-  }, options)
+      })
+    }, options)
 
-  observer.observe(document.querySelector('#contact'))
+    document.querySelector('#contact') && observer.observe(document.querySelector('#contact'))
+  })
 </script>

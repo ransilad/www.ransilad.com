@@ -41,44 +41,46 @@ import closeMenuMobile from '@assets/icons/closeMenuMobile.svg'
 </div>
 
 <script>
-  // Función para validar el tamaño de la pantalla y mostrar el menú
-  function validateMenu() {
-    if (window.innerWidth < 640) {
-      const isHidden = document.body.style.overflowY !== 'hidden'
-      document.querySelector('nav').classList.toggle('show-menu', !isHidden)
-    } else {
-      document.querySelector('nav').classList.add('show-menu')
-      document.body.style.overflowY = 'auto'
-    }
-  }
-  window.addEventListener('resize', validateMenu)
-  validateMenu()
-
-  // Función para mostrar/ocultar el menú en dispositivos móviles cuando se le da click al botón
-  document.querySelector('#menu').addEventListener('click', () => {
-    document.querySelector('#open-menu').classList.toggle('hidden')
-    document.querySelector('#close-menu').classList.toggle('hidden')
-    document.querySelector('nav').classList.toggle('show-menu')
-    document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden'
-  })
-
-  // Ocultar el menú cuando se le da click a un enlace del nav
-  const $navbar = document.querySelector('nav')
-  $navbar.querySelectorAll('a').forEach((anchor) => {
-    anchor.addEventListener('click', (_event) => {
+  document.addEventListener('astro:page-load', () => {
+    // Función para validar el tamaño de la pantalla y mostrar el menú
+    function validateMenu() {
       if (window.innerWidth < 640) {
-        document.querySelector('nav').classList.toggle('show-menu')
-        document.querySelector('#open-menu').classList.toggle('hidden')
-        document.querySelector('#close-menu').classList.toggle('hidden')
-        document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden'
+        const isHidden = document.body.style.overflowY !== 'hidden'
+        document.querySelector('nav').classList.toggle('show-menu', !isHidden)
+      } else {
+        document.querySelector('nav').classList.add('show-menu')
+        document.body.style.overflowY = 'auto'
       }
-    })
-  })
+    }
+    window.addEventListener('resize', validateMenu)
+    validateMenu()
 
-  window.addEventListener('scroll', function () {
-    const isScrolled = window.scrollY > 100
-    document.querySelector('.scroll-shadow').classList.toggle('bg-zinc-900/80', isScrolled)
-    document.querySelector('.scroll-shadow').classList.toggle('backdrop-blur-md', isScrolled)
+    // Función para mostrar/ocultar el menú en dispositivos móviles cuando se le da click al botón
+    document.querySelector('#menu').addEventListener('click', () => {
+      document.querySelector('#open-menu').classList.toggle('hidden')
+      document.querySelector('#close-menu').classList.toggle('hidden')
+      document.querySelector('nav').classList.toggle('show-menu')
+      document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden'
+    })
+
+    // Ocultar el menú cuando se le da click a un enlace del nav
+    const $navbar = document.querySelector('nav')
+    $navbar.querySelectorAll('a').forEach((anchor) => {
+      anchor.addEventListener('click', (_event) => {
+        if (window.innerWidth < 640) {
+          document.querySelector('nav').classList.toggle('show-menu')
+          document.querySelector('#open-menu').classList.toggle('hidden')
+          document.querySelector('#close-menu').classList.toggle('hidden')
+          document.body.style.overflowY = document.body.style.overflowY === 'hidden' ? 'auto' : 'hidden'
+        }
+      })
+    })
+
+    window.addEventListener('scroll', function () {
+      const isScrolled = window.scrollY > 100
+      document.querySelector('.scroll-shadow').classList.toggle('bg-zinc-900/80', isScrolled)
+      document.querySelector('.scroll-shadow').classList.toggle('backdrop-blur-md', isScrolled)
+    })
   })
 </script>
 

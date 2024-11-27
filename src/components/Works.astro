@@ -3,111 +3,7 @@ import Container from './utils/Container.astro'
 import TitleWithLine from './utils/TitleWithLine.astro'
 import { Picture } from 'astro:assets'
 import externalLinkIcon from '@assets/icons/external-link.svg'
-
-const WORK_KUBOS_ITEMS = [
-  {
-    title: 'Angular',
-    imagen: import('@assets/icons/brands/angular.svg')
-  },
-  {
-    title: 'React Native',
-    imagen: import('@assets/icons/brands/react-native.svg')
-  },
-  {
-    title: 'Git',
-    imagen: import('@assets/icons/brands/git.svg')
-  },
-  {
-    title: 'Jenkins',
-    imagen: import('@assets/icons/brands/jenkins.svg')
-  },
-  {
-    title: 'Docker',
-    imagen: import('@assets/icons/brands/docker.svg')
-  },
-  {
-    title: 'Kubernetes',
-    imagen: import('@assets/icons/brands/kubernetes.svg')
-  },
-  {
-    title: 'Terraform',
-    imagen: import('@assets/icons/brands/terraform.svg')
-  },
-  {
-    title: 'Python',
-    imagen: import('@assets/icons/brands/python.svg')
-  }
-]
-
-const WORK_ONA_ITEMS = [
-  {
-    title: 'Freelance',
-    imagen: import('@assets/icons/brands/freelance.svg')
-  },
-  {
-    title: 'React',
-    imagen: import('@assets/icons/brands/react-native.svg')
-  },
-  {
-    title: 'React Native',
-    imagen: import('@assets/icons/brands/react-native.svg')
-  },
-  {
-    title: 'Git',
-    imagen: import('@assets/icons/brands/git.svg')
-  },
-  {
-    title: 'Astro',
-    imagen: import('@assets/icons/brands/astro.svg')
-  },
-  {
-    title: 'TailwindCSS',
-    imagen: import('@assets/icons/brands/tailwind.svg')
-  },
-  {
-    title: 'Github Actions',
-    imagen: import('@assets/icons/brands/git.svg')
-  }
-]
-
-const WORK_DTEMITE_ITEMS = [
-  {
-    title: 'Freelance',
-    imagen: import('@assets/icons/brands/freelance.svg')
-  },
-  {
-    title: 'React',
-    imagen: import('@assets/icons/brands/react-native.svg')
-  },
-  {
-    title: 'React Native',
-    imagen: import('@assets/icons/brands/react-native.svg')
-  },
-  {
-    title: 'Astro',
-    imagen: import('@assets/icons/brands/astro.svg')
-  },
-  {
-    title: 'NextJS',
-    imagen: import('@assets/icons/brands/nextjs.svg')
-  },
-  {
-    title: 'TailwindCSS',
-    imagen: import('@assets/icons/brands/tailwind.svg')
-  },
-  {
-    title: 'Python',
-    imagen: import('@assets/icons/brands/python.svg')
-  },
-  {
-    title: 'Git',
-    imagen: import('@assets/icons/brands/git.svg')
-  },
-  {
-    title: 'Github Actions',
-    imagen: import('@assets/icons/brands/git.svg')
-  }
-]
+import { WORK_KUBOS_ITEMS, WORK_ONA_ITEMS, WORK_DTEMITE_ITEMS } from 'src/constants'
 ---
 
 <Container>
@@ -235,21 +131,23 @@ const WORK_DTEMITE_ITEMS = [
 </style>
 
 <script>
-  const options = {
-    rootMargin: '0px',
-    threshold: window.innerWidth < 640 ? 0.3 : 0.8
-  }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const itemsLinks = document.getElementsByClassName('item-link')
-        for (let item of itemsLinks) {
-          item.classList.remove('item-active')
+  document.addEventListener('astro:page-load', () => {
+    const options = {
+      rootMargin: '0px',
+      threshold: window.innerWidth < 640 ? 0.3 : 0.8
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const itemsLinks = document.getElementsByClassName('item-link')
+          for (let item of itemsLinks) {
+            item.classList.remove('item-active')
+          }
+          document.querySelector('#works-link').classList.add('item-active')
         }
-        document.querySelector('#works-link').classList.add('item-active')
-      }
-    })
-  }, options)
+      })
+    }, options)
 
-  observer.observe(document.querySelector('#works'))
+    document.querySelector('#works') && observer.observe(document.querySelector('#works'))
+  })
 </script>
