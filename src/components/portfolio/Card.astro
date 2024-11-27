@@ -6,10 +6,10 @@ export interface CardProps {
   item: any
 }
 
-const { item } = Astro.props
+const { item, hideOnMobile } = Astro.props
 ---
 
-<div class='relative flex flex-col overflow-clip rounded-xl border border-zinc-700 p-1'>
+<div class={'relative flex-col overflow-clip rounded-xl border border-zinc-700 p-1 ' + (hideOnMobile ? 'hidden md:flex' : 'flex')}>
   {item.isPersonal && <Ribbon>Personal</Ribbon>}
   <Picture class='object-cover rounded-lg' src={item.image} alt={item.title} width={500} height={279} />
   <div class='px-3 py-4'>
