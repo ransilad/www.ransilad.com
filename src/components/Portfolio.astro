@@ -5,22 +5,30 @@ import Card from './portfolio/Card.astro'
 import Container from './utils/Container.astro'
 import TitleWithLine from './utils/TitleWithLine.astro'
 
-const { showAll } = Astro.props
+const { showAllResults } = Astro.props
 ---
 
 <Container>
-  <section id='portfolio' class={'py-6 md:py-10 z-10 relative ' + (showAll ? '' : 'mask-image')}>
+  <section id='portfolio' class={'py-6 md:py-10 z-10 relative ' + (!showAllResults && 'mask-image')}>
     <TitleWithLine>Proyectos</TitleWithLine>
-    <div class='columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4'>
+    {
+      showAllResults && (
+        <p class='mb-10 text-pretty text-zinc-300 md:pr-64'>
+          A lo largo de los años, he participado en numerosos proyectos de diversas escalas, pero estos son los que considero más destacados. Algunos de ellos
+          son privados, por lo que no puedo compartirlos aquí.
+        </p>
+      )
+    }
+    <div class='columns-1 sm:columns-2 lg:columns-4 gap-4'>
       {
         PORTFOLIO_ITEMS.sort((a, b) => a.title.localeCompare(b.title))
-          .filter((item) => (showAll ? true : item.isTop))
-          .map((item, index) => <Card item={item} hideOnMobile={showAll ? false : index > 1} />)
+          .filter((item) => (showAllResults ? true : item.isTop))
+          .map((item, index) => <Card item={item} hideOnMobile={showAllResults ? false : index > 1} showDetails={showAllResults} />)
       }
     </div>
   </section>
   {
-    !showAll && (
+    !showAllResults && (
       <div class='z-20 absolute left-0 right-0 bottom-10 flex justify-center items-center'>
         <a href='/projects' class='text-primary font-semibold md:text-lg border border-zinc-700 rounded-md px-4 py-2 bg-zinc-900 hover:bg-zinc-800'>
           Ver todos los proyectos
@@ -56,6 +64,7 @@ const { showAll } = Astro.props
   .mask-image {
     mask-image: linear-gradient(#000 0%, transparent 88%);
     -webkit-mask-image: linear-gradient(#000 0%, transparent 88%);
+    user-select: none;
 
     @media (max-width: 768px) {
       mask-image: linear-gradient(#000 0%, transparent 90%);
