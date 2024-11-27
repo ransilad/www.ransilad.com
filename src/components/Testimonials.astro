@@ -30,7 +30,8 @@ const TESTIMONIALS = [
 ---
 
 <Container>
-  <section id='testimonials' class='py-6 md:py-10'>
+  <section id='testimonials' class='py-6 md:py-10 relative'>
+    <div class='-z w-64 blur-[400px] h-60 rounded-full bg-primary/60 absolute pointer-events-none select-none top-96 right-6 md:right-64'></div>
     <TitleWithLine>Testimonios</TitleWithLine>
     <a
       href='https://www.linkedin.com/in/ransilad/details/recommendations/'
@@ -44,7 +45,7 @@ const TESTIMONIALS = [
     <div class='mt-12 flex flex-col gap-6'>
       {
         TESTIMONIALS.map((testimonial) => (
-          <article class='rounded-xl border border-zinc-800 flex flex-col overflow-hidden p-5 md:p-8'>
+          <article class='rounded-xl border border-zinc-700 flex flex-col overflow-hidden p-5 md:p-8'>
             <p class='md:text-pretty font-light text-zinc-400 mb-4 mt-0 text-sm md:text-base'>{testimonial.testimonial}</p>
             <div class='flex flex-row gap-4 items-center ml-auto w-full'>
               <div class='flex-1'>

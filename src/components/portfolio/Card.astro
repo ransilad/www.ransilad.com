@@ -9,14 +9,14 @@ export interface CardProps {
 const { item } = Astro.props
 ---
 
-<div class='relative flex flex-col overflow-clip rounded-xl border border-zinc-800 p-1'>
+<div class='relative flex flex-col overflow-clip rounded-xl border border-zinc-700 p-1'>
   {item.isPersonal && <Ribbon>Personal</Ribbon>}
   <Picture class='object-cover rounded-lg' src={item.image} alt={item.title} width={500} height={279} />
   <div class='px-3 py-4'>
     <h3 class='text-primary font-semibold text-lg'>{item.title}</h3>
     <p class='text-pretty text-sm md:text-base text-zinc-400 font-light mt-2'>{item.description || ''}</p>
     <div class='flex gap-1 flex-wrap mt-6 text-sm'>
-      {item.tags.map((tag: string) => <span class='bg-zinc-900 rounded-lg px-2 py-1 text-white cursor-default'>{tag}</span>)}
+      {item.tags.map((tag: string) => <span class='bg-zinc-800 rounded-lg px-2 py-1 text-white cursor-default'>{tag}</span>)}
     </div>
   </div>
   {
@@ -28,7 +28,7 @@ const { item } = Astro.props
               href={item.githubUrl}
               target='_blank'
               rel='noreferrer'
-              class='text-sm font-semibold px-4 py-2 border border-zinc-800 cursor-pointer rounded-md hover:bg-zinc-900'
+              class='text-sm font-semibold px-4 py-2 border border-zinc-700 cursor-pointer rounded-md hover:bg-zinc-900'
             >
               Ver código
             </a>
@@ -40,7 +40,7 @@ const { item } = Astro.props
               href={item.url}
               target='_blank'
               rel='noreferrer'
-              class='text-sm font-semibold px-4 py-2 border border-zinc-800 cursor-pointer rounded-md hover:bg-zinc-900'
+              class='text-sm font-semibold px-4 py-2 border border-zinc-700 cursor-pointer rounded-md hover:bg-zinc-900'
             >
               Visitar sitio
             </a>

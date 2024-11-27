@@ -21,9 +21,10 @@ const SOFT_SKILLS = [
 ---
 
 <Container>
-  <section id='about' class='py-6 md:py-10'>
+  <section id='about' class='py-6 md:py-10 relative'>
+    <div class='-z w-64 blur-[400px] h-60 rounded-full bg-primary/50 absolute pointer-events-none select-none top-96 left-6 md:left-64'></div>
     <TitleWithLine>Acerca de mi</TitleWithLine>
-    <div class='grid grid-cols-10 gap-6 *:overflow-clip *:rounded-xl *:border *:border-zinc-800 *:p-6'>
+    <div class='grid grid-cols-10 gap-6 *:overflow-clip *:rounded-xl *:border *:border-zinc-700 *:p-6'>
       <article class='relative col-span-10 md:col-span-4'>
         <h3 class='text-xl md:text-2xl font-semibold mb-6 flex flex-row gap-4'>
           <span class='size-8'><Picture src={briefcaseIcon} alt='Maletín' width={32} height={32} /></span>
@@ -51,7 +52,7 @@ const SOFT_SKILLS = [
           <p>Estas competencias interpersonales y emocionales son fundamentales para trabajar en equipo, liderar proyectos y adaptarse a los cambios.</p>
         </div>
         <div class='flex flex-row flex-wrap gap-2 mt-auto'>
-          {SOFT_SKILLS.map((softSkill) => <article class='text-sm px-3 py-2 border border-zinc-800 rounded-full bg-zinc-900'>{softSkill}</article>)}
+          {SOFT_SKILLS.map((softSkill) => <article class='text-sm px-3 py-2 border border-zinc-700 rounded-full bg-zinc-900'>{softSkill}</article>)}
         </div>
       </article>
       <article class='relative col-span-10 md:col-span-6'>
