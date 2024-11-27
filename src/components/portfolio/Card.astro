@@ -1,6 +1,5 @@
 ---
 import { Picture } from 'astro:assets'
-import Ribbon from '../Ribbon.astro'
 
 export interface CardProps {
   item: any
@@ -9,12 +8,11 @@ export interface CardProps {
 const { item, hideOnMobile } = Astro.props
 ---
 
-<div class={'relative flex-col overflow-clip rounded-xl border border-zinc-700 p-1 ' + (hideOnMobile ? 'hidden md:flex' : 'flex')}>
-  {item.isPersonal && <Ribbon>Personal</Ribbon>}
+<div class={'break-inside-avoid relative flex-col rounded-xl border border-zinc-700 p-1 mb-4 ' + (hideOnMobile ? 'hidden md:flex' : 'flex')}>
   <Picture class='object-cover rounded-lg' src={item.image} alt={item.title} width={500} height={279} />
   <div class='px-3 py-4'>
     <h3 class='text-primary font-semibold text-lg'>{item.title}</h3>
-    <p class='text-pretty text-sm md:text-base text-zinc-300 font-light mt-2'>{item.description || ''}</p>
+    <p class='text-pretty text-sm text-zinc-300 font-light mt-2'>{item.description || ''}</p>
     <div class='flex gap-1 flex-wrap mt-6 text-sm'>
       {item.tags.map((tag: string) => <span class='bg-zinc-800 rounded-lg px-2 py-1 text-white cursor-default'>{tag}</span>)}
     </div>

@@ -62,7 +62,8 @@ export const PORTFOLIO_ITEMS = [
     image: import('@assets/images/portfolio/a21.avif'),
     url: 'https://www.antarctica21.com/',
     tags: ['React Native', 'JavaScript', 'HTML/CSS', 'Redux'],
-    description: 'Aplicación móvil que permite gestionar toda la experiencia del viaje, desde la reserva hasta el check-out'
+    description: 'Aplicación móvil que permite gestionar toda la experiencia del viaje, desde la reserva hasta el check-out',
+    isTop: true
   },
   {
     id: 'dtemite',
@@ -99,7 +100,6 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 'svp-condominio',
-    isPersonal: true,
     title: 'SVP Condominio',
     image: import('@assets/images/portfolio/svp-condominio.avif'),
     url: 'https://condominio-svp.vercel.app/',
@@ -126,7 +126,6 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 'games-ransilad',
-    isPersonal: true,
     title: 'Juegos',
     image: import('@assets/images/portfolio/games-ransilad.avif'),
     url: 'https://games.ransilad.com/',
@@ -137,7 +136,6 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 'tres-en-raya-ransilad',
-    isPersonal: true,
     title: 'Juego Tres en Raya',
     image: import('@assets/images/portfolio/tres-en-raya-ransilad.avif'),
     url: 'https://tres-en-raya.ransilad.com/',
@@ -147,7 +145,6 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 'syn-ant-definition-finder',
-    isPersonal: true,
     title: 'Buscador de sinónimos, antónimos y definiciones',
     image: import('@assets/images/portfolio/syn-ant-definition-finder.avif'),
     url: 'https://syn-ant-definition-finder.ransilad.com/',
@@ -157,7 +154,6 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 'memory-game',
-    isPersonal: true,
     title: 'Memoría',
     image: import('@assets/images/portfolio/memory-game.avif'),
     url: 'https://memory.ransilad.com/',
@@ -167,7 +163,6 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 'esemed',
-    isPersonal: false,
     title: 'ESEMED',
     image: import('@assets/images/portfolio/esemed.avif'),
     url: 'https://www.esemed.cl/',
