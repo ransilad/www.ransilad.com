@@ -2,11 +2,7 @@
 import SpeedInsights from '@vercel/speed-insights/astro'
 
 import Header from '@components/Header.astro'
-import Landing from '@components/Landing.astro'
-import AboutMe from '@components/AboutMe.astro'
-import Works from '@components/Works.astro'
 import Portfolio from '@components/Portfolio.astro'
-import Testimonials from '@components/Testimonials.astro'
 import ContactMe from '@components/ContactMe.astro'
 import Footer from '@components/Footer.astro'
 
@@ -22,6 +18,7 @@ import '@fontsource/poppins/900.css'
 
 import './_index.css'
 import { ViewTransitions } from 'astro:transitions'
+import HeroMask from '@components/HeroMask.astro'
 ---
 
 <html lang='es'>
@@ -54,11 +51,10 @@ import { ViewTransitions } from 'astro:transitions'
     <ViewTransitions />
   </head>
   <body class='antialiased'>
+    <HeroMask />
+
     <Header />
     <div class='pt-20'>
-      <div class='-z-10 w-60 md:w-40 blur-[200px] top-6 h-40 rounded-full bg-primary absolute pointer-events-none select-none md:top-32 left-0'></div>
-      <div class='hidden md:block -z-10 w-60 blur-[200px] h-60 rounded-full bg-primary absolute pointer-events-none select-none top-80 md:top-56 right-0'></div>
-
       <Portfolio showAllResults />
     </div>
     <ContactMe />

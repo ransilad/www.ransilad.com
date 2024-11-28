@@ -22,6 +22,7 @@ import '@fontsource/poppins/900.css'
 
 import './_index.css'
 import { ViewTransitions } from 'astro:transitions'
+import HeroMask from '@components/HeroMask.astro'
 ---
 
 <html lang='es'>
@@ -54,6 +55,7 @@ import { ViewTransitions } from 'astro:transitions'
     <ViewTransitions />
   </head>
   <body class='antialiased'>
+    <HeroMask />
     <Header />
     <Landing />
     <AboutMe />

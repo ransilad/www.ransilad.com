@@ -8,7 +8,7 @@ export interface CardProps {
 const { item, hideOnMobile, showDetails } = Astro.props
 ---
 
-<div class={'break-inside-avoid relative flex-col rounded-xl border border-zinc-700 p-1 mb-4 ' + (hideOnMobile ? 'hidden lg:flex' : 'flex')}>
+<div class={'break-inside-avoid relative flex-col rounded-xl border border-zinc-700 backdrop-blur-sm p-1 mb-4 ' + (hideOnMobile ? 'hidden lg:flex' : 'flex')}>
   <Picture class='object-cover rounded-lg mask-image-card' src={item.image} alt={item.title} width={500} height={279} />
   <div class='px-3 py-4'>
     <h3 class='text-primary font-semibold text-lg'>{item.title}</h3>
